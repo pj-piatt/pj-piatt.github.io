@@ -1,224 +1,155 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PJ Piatt | IT Portfolio</title>
-  <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #101623;
-      color: #c9d1d9;
-      scroll-behavior: smooth;
+      background-color: #1b2332;
+      color: #e6ecf1;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
     }
     header img {
+      max-width: 800px;
       width: 100%;
-      max-width: 900px;
-      display: block;
-      margin: auto;
+      margin-bottom: 1rem;
     }
     h1 {
-      text-align: left;
-      margin: 1rem auto 0.25rem;
-      font-size: 2.5rem;
-      max-width: 960px;
-      padding-left: 1rem;
+      margin: 0.25rem 0;
+      font-size: 2.8rem;
     }
-    .subtitle, .contact {
-      text-align: center;
-      font-weight: 600;
+    .subtitle {
+      font-weight: 500;
       margin-bottom: 0.5rem;
     }
     .contact a {
-      color: #58a6ff;
-      margin: 0 8px;
+      color: #66b2ff;
+      margin: 0 10px;
       text-decoration: none;
     }
     .rainbow-divider {
-      width: 100%;
-      height: 10px;
-      margin: 2rem 0;
-      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-      background-size: 300% 100%;
-      animation: shimmer 3s linear infinite;
-    }
-    @keyframes shimmer {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 100% 50%; }
+      margin: 1.5rem auto;
+      height: 8px;
+      width: 80%;
+      border-radius: 5px;
+      background: linear-gradient(to right, transparent, red, orange, yellow, green, blue, indigo, violet, transparent);
     }
     section {
-      max-width: 960px;
-      margin: auto;
+      max-width: 900px;
+      margin: 2rem auto;
       padding: 1rem;
     }
     h2 {
       text-align: center;
-      font-size: 1.75rem;
+      font-size: 1.8rem;
       margin-bottom: 1rem;
     }
-    .project, .card, form {
-      background: #161b22;
+    .card, .badge-container {
+      background-color: #2a3242;
       padding: 1rem;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-    details summary {
-      cursor: pointer;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-    .blog-posts {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-    .card {
-      width: 30%;
-      text-align: left;
-    }
-    .pagination {
-      text-align: center;
-      margin-top: 1rem;
-    }
-    .tech-contact-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    .tech-stack, .education, form {
-      width: 48%;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
     }
     .badge {
-      background: #30363d;
-      padding: 0.4rem 0.8rem;
-      border-radius: 20px;
-      margin: 4px;
       display: inline-block;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 0.6rem;
-      margin: 0.3rem 0;
-      background: #0d1117;
-      border: 1px solid #444;
+      background-color: #3b475a;
       color: #fff;
-      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      margin: 5px;
+      border-radius: 25px;
+      font-size: 0.9rem;
     }
-    form button {
-      background: #2f81f7;
-      color: white;
-      padding: 0.6rem 1.5rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
+    .project {
+      background-color: #2a3242;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
     }
     footer {
       text-align: center;
-      padding: 2rem 1rem;
-      background-color: #1b1f27;
+      padding: 2rem;
       font-size: 0.9rem;
-      color: #8b949e;
-    }
-    .github-stats img {
-      max-width: 300px;
-      margin: 0.5rem;
+      background-color: #16202c;
+      color: #aab4c4;
     }
   </style>
 </head>
 <body>
+  <header>
+    <img src="banner.jpg" alt="PJ Piatt Banner" />
+    <h1>PJ Piatt</h1>
+    <div class="subtitle">IT Specialist | Cybersecurity Grad Student | Systems & Support Strategist</div>
+    <div class="contact">
+      <a href="mailto:workwithpj@icloud.com"><i class="fas fa-envelope"></i> Email</a> |
+      <a href="https://www.linkedin.com/in/pj-piatt"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+      <a href="https://github.com/pj-piatt/IT-portfolio/blob/main/PJ_Piatt_Resume.pdf"><i class="fas fa-file-pdf"></i> Resume (PDF)</a>
+    </div>
+  </header>
 
-<header>
-  <img src="banner.jpg" alt="PJ Banner" />
-  <h1>PJ Piatt</h1>
-  <div class="subtitle">IT Specialist | Cybersecurity Grad Student | Systems & Support Strategist</div>
-  <div class="contact">
-    <a href="mailto:workwithpj@icloud.com"><i class="fas fa-envelope"></i> Email</a> |
-    <a href="https://www.linkedin.com/in/pj-piatt"><i class="fab fa-linkedin"></i> LinkedIn</a> |
-    <a href="https://github.com/pj-piatt/IT-portfolio/blob/main/PJ_Piatt_Resume.pdf"><i class="fas fa-file-pdf"></i> Resume (PDF)</a>
-  </div>
-</header>
+  <div class="rainbow-divider"></div>
 
-<div class="rainbow-divider"></div>
+  <section>
+    <h2>About Me</h2>
+    <div class="card">
+      <p>I’m PJ Piatt — an experienced IT Specialist and graduate student focused on cybersecurity, systems support, and scalable IT infrastructure. I specialize in helpdesk systems, endpoint compliance, documentation, automation, and supporting growth-focused teams with secure solutions.</p>
+    </div>
+  </section>
 
-<section>
-  <h2>Projects</h2>
-  <details class="project" open>
-    <summary>🧠 PowerShell Audit Toolkit</summary>
-    <p>GUI-based auditing tool for Active Directory with group scan, password-expiry automation, and CSV reporting.</p>
-    <a href="https://github.com/pj-piatt/powershell-audit-toolkit">View on GitHub</a>
-  </details>
-  <details class="project">
-    <summary>🌐 SharePoint Access Manager</summary>
-    <p>Manage and audit guest access securely in Microsoft 365 environments.</p>
-    <a href="https://github.com/pj-piatt/sharepoint-access-manager">View on GitHub</a>
-  </details>
-  <details class="project">
-    <summary>🛠️ Intune Remediation Toolkit</summary>
-    <p>Remediation scripts and compliance reporting for endpoint management.</p>
-    <a href="https://github.com/pj-piatt/intune-remediation-toolkit">View on GitHub</a>
-  </details>
-</section>
+  <section>
+    <h2>Tech Stack</h2>
+    <div class="badge-container">
+      <span class="badge">PowerShell</span>
+      <span class="badge">Microsoft 365</span>
+      <span class="badge">SharePoint</span>
+      <span class="badge">Google Workspace</span>
+      <span class="badge">Jira</span>
+      <span class="badge">Confluence</span>
+    </div>
+  </section>
 
+  <section>
+    <h2>Education & Certifications</h2>
+    <div class="badge-container">
+      <span class="badge">B.S. Information Technology</span>
+      <span class="badge">M.S. Data Science</span>
+      <span class="badge">M.S. Cybersecurity</span>
+      <span class="badge">CompTIA A+</span>
+      <span class="badge">ITIL Certified</span>
+      <span class="badge">Google IT Support</span>
+      <span class="badge">Microsoft IT Support</span>
+      <span class="badge">Healthcare IT Support</span>
+    </div>
+  </section>
 
-<section>
-  <h2>Blog Posts</h2>
-  <div class="blog-posts">
-    <div class="card"><h3>5 Quick Computer Tips for Beginners</h3><p>Apr 24, 2024</p></div>
-    <div class="card"><h3>Stay Safe from Phishing Emails</h3><p>Apr 24, 2024</p></div>
-    <div class="card"><h3>How to Speed Up Your Computer</h3><p>Apr 24, 2024</p></div>
-  </div>
-  <div class="pagination"><span>1</span> <span>2</span></div>
-</section>
+  <section>
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>🧠 PowerShell Audit Toolkit</h3>
+      <p>GUI-based auditing tool for Active Directory with group scan, password-expiry automation, and CSV reporting.</p>
+      <a href="https://github.com/pj-piatt/powershell-audit-toolkit">View on GitHub</a>
+    </div>
+    <div class="project">
+      <h3>🌐 SharePoint Access Manager</h3>
+      <p>Manage and audit guest access securely in Microsoft 365 environments.</p>
+      <a href="https://github.com/pj-piatt/sharepoint-access-manager">View on GitHub</a>
+    </div>
+    <div class="project">
+      <h3>🛠️ Intune Remediation Toolkit</h3>
+      <p>Remediation scripts and compliance reporting for endpoint management.</p>
+      <a href="https://github.com/pj-piatt/intune-remediation-toolkit">View on GitHub</a>
+    </div>
+  </section>
 
-
-<section class="tech-contact-wrapper">
-  <div class="tech-stack">
-    <h2>💻 Tech Stack</h2>
-    <span class="badge">PowerShell</span>
-    <span class="badge">Microsoft 365</span>
-    <span class="badge">Google Workspace</span>
-    <span class="badge">SharePoint</span>
-    <span class="badge">Jira</span>
-    <span class="badge">Confluence</span>
-  </div>
-  <form action="https://formspree.io/f/xblyrwop" method="POST">
-    <h2>📬 Contact Me</h2>
-    <input type="text" name="name" placeholder="Your name" required />
-    <input type="email" name="_replyto" placeholder="Your email" required />
-    <textarea name="message" rows="5" placeholder="Your message" required></textarea>
-    <button type="submit">Send</button>
-  </form>
-</section>
-
-
-<section>
-  <h2>🎓 Education & Certifications</h2>
-  <div class="education">
-    <span class="badge">B.S. Information Technology</span>
-    <span class="badge">M.S. Data Science</span>
-    <span class="badge">M.S. Cybersecurity</span>
-    <span class="badge">CompTIA A+</span>
-    <span class="badge">ITIL Certified</span>
-    <span class="badge">Microsoft IT Support</span>
-    <span class="badge">Google IT Support</span>
-    <span class="badge">Healthcare IT Support</span>
-  </div>
-</section>
-
-<section class="github-stats">
-  <h2>📊 GitHub Activity</h2>
-  <img src="https://github-readme-stats.vercel.app/api?username=pj-piatt&show_icons=true&theme=radical" alt="GitHub Stats" />
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=pj-piatt.github.io" alt="Visitor Count" />
-</section>
-
-<footer>
-  &copy; 2025 PJ Piatt • Built with ❤️ using GitHub Pages
-</footer>
-
+  <footer>
+    © 2025 PJ Piatt • Built with ❤️ using GitHub Pages
+  </footer>
 </body>
 </html>
