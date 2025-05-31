@@ -5,12 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PJ Piatt | Portfolio</title>
-  <link rel="icon" type="image/png" href="favicon.png" />
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #1e2a38;
+      background-color: #1D2029;
       color: #f0f0f0;
     }
 
@@ -35,7 +34,7 @@
 
     section {
       padding: 40px 10%;
-      background-color: #263545;
+      background-color: #162739;
       margin: 20px auto;
       border-radius: 8px;
     }
@@ -45,78 +44,23 @@
       margin-bottom: 20px;
     }
 
-    .about-content {
-      padding: 10px;
-      background-color: #32455d;
-      border-radius: 6px;
-    }
-
-    .about-details {
-      display: block;
-      padding-top: 10px;
-    }
-
-    .about-flex {
-      display: flex;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .about-flex ul {
-      flex: 1;
-    }
-
-    .project-dropdown {
-      background-color: #32455d;
-      padding: 10px;
-      border-radius: 6px;
-      margin-bottom: 10px;
-      cursor: pointer;
-    }
-
-    .project-details {
-      display: none;
-      padding-top: 10px;
-    }
-
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .blog-card {
-      background-color: #32455d;
-      padding: 15px;
-      border-radius: 8px;
-    }
-
-    .blog-card .date {
-      font-size: 0.85rem;
-      color: #ccc;
-      margin-bottom: 10px;
-    }
-
-    .pagination {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .tech-contact-container h2 {
-      text-align: center;
-      margin-bottom: 0;
+    .tech-contact-container {
+      padding: 40px 10%;
+      margin: 20px auto;
+      background-color: transparent;
     }
 
     .tech-contact {
       display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
     }
 
-    .contact-form, .badge-section {
+    .badge-section,
+    .contact-form {
       flex: 1 1 48%;
-      background-color: #32455d;
+      background-color: #162739;
       padding: 20px;
       border-radius: 8px;
     }
@@ -131,96 +75,51 @@
       border-radius: 4px;
     }
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      font-size: 0.9rem;
+    .contact-form button {
+      background-color: #4999ED;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #3a85d6;
     }
 
     a {
-      color: #66b2ff;
+      color: #4999ED;
       text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
     }
-  </style>
-  <script>
-    function toggleProject(element) {
-      const detail = element.querySelector('.project-details');
-      if (detail) {
-        detail.style.display = detail.style.display === 'block' ? 'none' : 'block';
-      }
+
+    .dropdown-arrow {
+      color: #BF79CD;
     }
-  </script>
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
   <header></header>
   <h1>PJ Piatt</h1>
   <div class="divider"></div>
 
-  <section>
-    <h2>👋 About Me</h2>
-    <div class="about-content">
-      <div id="about-details" class="about-details">
-        <p>I’m an experienced IT Support Specialist and Cybersecurity enthusiast. I hold a Master’s degree in Data Science and am currently completing my Master’s in Cybersecurity Technology. My experience spans help desk support, Microsoft 365, SharePoint, SSO/MFA implementation, and cloud security.</p>
-        <div class="about-flex">
-          <ul>
-            <h3>🎓 Education</h3>
-            <li>Master’s in Cybersecurity Technology – UMGC (In Progress)</li>
-            <li>Master’s in Data Science – Completed</li>
-            <li>Bachelor’s in IT – University of Phoenix</li>
-          </ul>
-          <ul>
-            <h3>📜 Certifications</h3>
-            <li>CompTIA A+</li>
-            <li>Google IT Support Professional Certificate</li>
-            <li>Microsoft IT Support Certificate</li>
-            <li>ITIL 4 Foundations</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>💼 Projects</h2>
-    <div class="project-dropdown" onclick="toggleProject(this)">
-      <strong>🧠 PowerShell Audit Toolkit</strong>
-      <div class="project-details">
-        <p>GUI-based auditing tool for Active Directory with group scan, password-expiry automation, and CSV reporting.</p>
-        <a href="#">View on GitHub</a>
-      </div>
-    </div>
-    <div class="project-dropdown" onclick="toggleProject(this)">
-      <strong>🔐 SharePoint Access Manager</strong>
-      <div class="project-details">
-        <p>Manage and audit guest access securely in Microsoft 365 environments.</p>
-        <a href="#">View on GitHub</a>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>📝 Blog</h2>
-    <div class="blog-grid">
-      <div class="blog-card"><h3>5 Quick Computer Tips</h3><p class="date">Apr 24, 2024</p><p>Simple PC fixes for common user issues.</p></div>
-      <div class="blog-card"><h3>Secure Your Inbox</h3><p class="date">Apr 25, 2024</p><p>How to avoid phishing scams.</p></div>
-      <div class="blog-card"><h3>Intro to MFA</h3><p class="date">Apr 26, 2024</p><p>What is MFA and why it matters.</p></div>
-    </div>
-    <div class="pagination"><span>&lt;</span> <span>1</span> <span>2</span> <span>&gt;</span></div>
-  </section>
-
   <section class="tech-contact-container">
-    <h2>🛠️ Tech Stack</h2>
+    <h2>🛠️ Tech Stack & 📬 Contact Me</h2>
     <div class="tech-contact">
       <div class="badge-section">
         <p><span>💻</span> PowerShell, Intune, Azure AD, SharePoint, Microsoft 365</p>
         <p><span>🛡️</span> Proofpoint, GlobalProtect VPN, MFA/SSO</p>
       </div>
       <div class="contact-form">
-        <h2>📬 Contact Me</h2>
         <form action="https://formspree.io/f/xblyrwop" method="POST">
           <input type="text" name="name" placeholder="Your name" required />
           <input type="email" name="_replyto" placeholder="Your email" required />
