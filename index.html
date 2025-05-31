@@ -1,256 +1,218 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PJ Piatt | IT Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PJ Piatt | IT Specialist, Cybersecurity Student & AI Enthusiast" />
+  <title>PJ Piatt | IT Specialist</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #1a1e29;
-      color: #e6ecf1;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1f2a3a;
+      color: #f0f0f0;
+      line-height: 1.6;
     }
+
     header {
-      position: relative;
       text-align: center;
-      color: white;
     }
-    header img {
+
+    .banner {
       width: 100%;
       height: auto;
-      display: block;
     }
-    .hero-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+
+    h1 {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 2.5rem;
+      color: #a8d0ff;
     }
-    .hero-text h1 {
-      margin: 0;
-      font-size: 3rem;
-    }
-    .subtitle {
-      font-weight: 500;
-      margin-top: 0.5rem;
-    }
-    .contact a {
-      color: #a8d2ff;
-      margin: 0 10px;
-      text-decoration: none;
-    }
+
     .rainbow-divider {
-      margin: 2rem auto;
       height: 6px;
       width: 60%;
-      border-radius: 5px;
-      background: linear-gradient(to right, transparent, red, orange, yellow, green, blue, indigo, violet, transparent);
+      margin: 1rem auto;
+      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+      border-radius: 3px;
     }
-    section {
+
+    .section {
+      padding: 2rem;
       max-width: 1000px;
-      margin: 2rem auto;
-      padding: 1rem;
+      margin: auto;
     }
-    h2 {
+
+    .section h2 {
       text-align: center;
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
+      color: #a8d0ff;
     }
-    .card {
-      background-color: #2b3140;
+
+    .project-card {
+      background-color: #2b3a4d;
       padding: 1rem;
-      border-radius: 10px;
-      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      margin: 1rem 0;
     }
-    .badge-container {
+
+    details {
+      background-color: #2b3a4d;
+      border-radius: 8px;
+      padding: 1rem;
+    }
+
+    .badge-row {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem;
-    }
-    .badge {
-      background-color: #3b4455;
-      color: #fff;
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
-      font-size: 0.9rem;
-    }
-    .flex-pair {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
       justify-content: space-between;
+      gap: 2rem;
+      margin-top: 1.5rem;
     }
-    .flex-pair > div {
-      flex: 1 1 45%;
-      background-color: #2b3140;
+
+    .badge-section {
+      flex: 1 1 300px;
+      background-color: rgba(255, 255, 255, 0.03);
       padding: 1rem;
-      border-radius: 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
-    .project {
-      background-color: #2b3140;
+
+    .badge-section h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: #a8d0ff;
+      font-size: 1.25rem;
+    }
+
+    footer {
+      text-align: center;
       padding: 1rem;
-      border-radius: 10px;
-      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+      background-color: #1a222f;
     }
-    details summary {
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 1.1rem;
+
+    .social-icons a {
+      margin: 0 0.5rem;
+      color: #a8d0ff;
+      font-size: 1.2rem;
     }
+
     .blog-posts {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
       justify-content: space-between;
     }
-    .blog-posts .card {
-      width: 30%;
-    }
-    .tech-contact {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 2rem;
-    }
-    .tech-stack, .contact-form {
-      flex: 1 1 48%;
-      background-color: #2b3140;
+
+    .blog-post {
+      flex: 1 1 calc(33.333% - 1rem);
+      background-color: #2b3a4d;
       padding: 1rem;
-      border-radius: 10px;
+      border-radius: 8px;
     }
-    .contact-form form input,
-    .contact-form form textarea {
-      width: 100%;
-      padding: 0.6rem;
-      margin: 0.3rem 0;
-      background: #0d1117;
-      border: 1px solid #444;
-      color: #fff;
-      border-radius: 5px;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
     }
-    .contact-form form button {
-      background: #2f81f7;
-      color: white;
-      padding: 0.6rem 1.5rem;
+
+    input, textarea, button {
+      padding: 0.75rem;
+      border-radius: 4px;
       border: none;
-      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #a8d0ff;
+      color: #1f2a3a;
       cursor: pointer;
-      font-weight: bold;
     }
-    a {
-      color: #a8d2ff;
-    }
-    a:hover {
-      color: #c3e4ff;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      background-color: #2b3140;
-      color: #aab4c4;
+
+    button:hover {
+      background-color: #90bae1;
     }
   </style>
 </head>
+
 <body>
-
-<header>
-  <img src="banner.jpg" alt="PJ Piatt Banner" />
-  <div class="hero-text">
+  <header>
+    <img src="banner.jpg" alt="PJ Piatt banner" class="banner">
     <h1>PJ Piatt</h1>
-    <div class="subtitle">IT Specialist | Cybersecurity Grad Student | Systems & Support Strategist</div>
-    <div class="contact">
-      <a href="mailto:workwithpj@icloud.com"><i class="fas fa-envelope"></i> Email</a> |
-      <a href="https://www.linkedin.com/in/pj-piatt"><i class="fab fa-linkedin"></i> LinkedIn</a> |
-      <a href="https://github.com/pj-piatt/IT-portfolio/blob/main/PJ_Piatt_Resume.pdf"><i class="fas fa-file-pdf"></i> Resume (PDF)</a>
+    <div class="rainbow-divider"></div>
+  </header>
+
+  <section class="section">
+    <details open>
+      <summary><h2>👋 About Me</h2></summary>
+      <p>
+        I'm PJ Piatt — a passionate IT Specialist, Cybersecurity graduate student, and AI enthusiast with over a decade of experience in technical support and enterprise IT environments. I blend hands-on problem solving with a love for process improvement, user education, and clean documentation.
+      </p>
+
+      <div class="badge-row">
+        <div class="badge-section">
+          <h3>🎓 Education</h3>
+          <ul>
+            <li>MS Cybersecurity Technology (in progress) — UMGC</li>
+            <li>MS Data Science — UMGC</li>
+            <li>BS Information Technology — University of Phoenix</li>
+            <li>AA Information Technology — University of Phoenix</li>
+          </ul>
+        </div>
+
+        <div class="badge-section">
+          <h3>📜 Certifications</h3>
+          <ul>
+            <li>Google IT Support Professional</li>
+            <li>Advanced Software Developer</li>
+            <li>Software Architecture</li>
+            <li>HIPAA for IT Professionals</li>
+          </ul>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section">
+    <h2>💼 Projects</h2>
+    <div class="project-card">
+      <details>
+        <summary>Custom PowerShell Audit Script</summary>
+        <p>Developed a responsive PowerShell GUI tool for Active Directory group and permission audits with export support.</p>
+      </details>
     </div>
-  </div>
-</header>
+    <div class="project-card">
+      <details>
+        <summary>IT Helpdesk Migration</summary>
+        <p>Migrated legacy helpdesk to Jira Service Management, implemented SSO, and trained all end users.</p>
+      </details>
+    </div>
+  </section>
 
-<div class="rainbow-divider"></div>
-
-<section>
-  <h2>About Me</h2>
-  <div class="card">
-    <p>I’m PJ Piatt — an experienced IT Specialist and graduate student focused on cybersecurity, systems support, and scalable IT infrastructure. I specialize in helpdesk systems, endpoint compliance, documentation, automation, and supporting growth-focused teams with secure solutions.</p>
-  </div>
-</section>
-
-<section>
-  <h2>Education & Certifications</h2>
-  <div class="flex-pair">
-    <div>
-      <h3>Degrees</h3>
-      <div class="badge-container">
-        <span class="badge">B.S. Information Technology</span>
-        <span class="badge">M.S. Data Science</span>
-        <span class="badge">M.S. Cybersecurity</span>
+  <section class="section">
+    <h2>📝 Blog</h2>
+    <div class="blog-posts">
+      <div class="blog-post">
+        <h3>Quick Fix: Clearing Your Browser Cache</h3>
+        <p>Learn how to clear your cache to solve common website issues in under 30 seconds.</p>
+      </div>
+      <div class="blog-post">
+        <h3>Slow PC? Try These 3 Tips</h3>
+        <p>End-user friendly tips to boost PC performance using built-in Windows tools.</p>
+      </div>
+      <div class="blog-post">
+        <h3>🛡️ Create a Stronger Password Today</h3>
+        <p>Use passphrases, multi-word combos, and MFA to secure your logins easily.</p>
       </div>
     </div>
-    <div>
-      <h3>Certifications</h3>
-      <div class="badge-container">
-        <span class="badge">CompTIA A+</span>
-        <span class="badge">ITIL Certified</span>
-        <span class="badge">Google IT Support</span>
-        <span class="badge">Microsoft IT Support</span>
-        <span class="badge">Healthcare IT Support</span>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section>
-  <h2>Projects</h2>
-  <div class="project">
-    <details>
-      <summary>🧠 PowerShell Audit Toolkit</summary>
-      <p>GUI-based auditing tool for Active Directory with group scan, password-expiry automation, and CSV reporting.</p>
-      <a href="https://github.com/pj-piatt/powershell-audit-toolkit">View on GitHub</a>
-    </details>
-  </div>
-  <div class="project">
-    <details>
-      <summary>🌐 SharePoint Access Manager</summary>
-      <p>Manage and audit guest access securely in Microsoft 365 environments.</p>
-      <a href="https://github.com/pj-piatt/sharepoint-access-manager">View on GitHub</a>
-    </details>
-  </div>
-  <div class="project">
-    <details>
-      <summary>🛠️ Intune Remediation Toolkit</summary>
-      <p>Remediation scripts and compliance reporting for endpoint management.</p>
-      <a href="https://github.com/pj-piatt/intune-remediation-toolkit">View on GitHub</a>
-    </details>
-  </div>
-</section>
-
-<section>
-  <h2>Blog Posts</h2>
-  <div class="blog-posts">
-    <div class="card"><h3>5 Quick Computer Tips for Beginners</h3><p>Apr 24, 2024</p></div>
-    <div class="card"><h3>Stay Safe from Phishing Emails</h3><p>Apr 24, 2024</p></div>
-    <div class="card"><h3>How to Speed Up Your Computer</h3><p>Apr 24, 2024</p></div>
-  </div>
-</section>
-
-<section class="tech-contact">
-  <div class="tech-stack">
-    <h2>Tech Stack</h2>
-    <div class="badge-container">
-      <span class="badge">PowerShell</span>
-      <span class="badge">Microsoft 365</span>
-      <span class="badge">SharePoint</span>
-      <span class="badge">Google Workspace</span>
-      <span class="badge">Jira</span>
-      <span class="badge">Confluence</span>
-    </div>
-  </div>
-  <div class="contact-form">
+  <section class="section">
     <h2>📬 Contact Me</h2>
     <form action="https://formspree.io/f/xblyrwop" method="POST">
       <input type="text" name="name" placeholder="Your name" required />
@@ -258,12 +220,16 @@
       <textarea name="message" rows="5" placeholder="Your message" required></textarea>
       <button type="submit">Send</button>
     </form>
-  </div>
-</section>
+  </section>
 
-<footer>
-  © 2025 PJ Piatt • Built with ❤️ using GitHub Pages
-</footer>
-
+  <footer>
+    <div class="social-icons">
+      <a href="mailto:pj@example.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/pj-piatt" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="resume.pdf" title="Download Resume" target="_blank"><i class="fas fa-file"></i></a>
+    </div>
+    <p>© 2025 PJ Piatt — Built with ❤️</p>
+  </footer>
 </body>
+
 </html>
