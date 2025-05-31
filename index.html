@@ -6,93 +6,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PJ Piatt | IT Portfolio</title>
   <link rel="icon" href="favicon.ico" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #0d1117;
+      background: #0d1117;
       color: #c9d1d9;
-      text-align: center;
     }
     header img {
       width: 100%;
       max-width: 900px;
-      margin: auto;
       display: block;
+      margin: auto;
     }
     h1 {
-      font-size: 2.4rem;
-      margin: 0.5rem 0 0.2rem;
-    }
-    .subtitle, .contact a {
-      font-weight: 600;
+      text-align: center;
+      margin-top: 0.5rem;
+      font-size: 2.5rem;
     }
     .rainbow-bar {
-      height: 4px;
       width: 200px;
+      height: 4px;
       margin: 0.5rem auto;
       background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
       border-radius: 2px;
     }
-    .contact a {
-      color: #58a6ff;
-      margin: 0 8px;
-      text-decoration: none;
+    .subtitle {
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
     }
-    .section {
-      padding: 2rem 1rem;
-      max-width: 960px;
-      margin: auto;
-    }
-    .project, .card, form {
-      background: #161b22;
-      padding: 1rem;
-      border-radius: 8px;
+    .contact {
+      text-align: center;
       margin-bottom: 1rem;
     }
-    .blog-grid {
+    .contact a {
+      color: #58a6ff;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+    section {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .project {
+      background: #161b22;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .project h3 {
+      margin: 0;
+    }
+    .blog-posts {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
+      justify-content: space-between;
     }
-    .blog-grid .card {
-      width: 280px;
+    .card {
+      background: #1c2128;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      width: 30%;
       text-align: left;
     }
-    .tech-icons {
+    .pagination {
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+    .tech-contact-wrapper {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
+      justify-content: space-between;
     }
-    .tech-icons span {
-      background: #21262d;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
+    .tech-stack, form {
+      width: 48%;
+    }
+    .badge {
+      background: #30363d;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      margin: 4px;
+      display: inline-block;
     }
     form input, form textarea {
       width: 100%;
-      padding: 0.5rem;
-      margin: 0.4rem 0;
+      padding: 0.6rem;
+      margin: 0.3rem 0;
       background: #0d1117;
-      border: 1px solid #30363d;
-      border-radius: 4px;
-      color: white;
+      border: 1px solid #444;
+      color: #fff;
+      border-radius: 5px;
     }
     form button {
       background: #238636;
-      color: white;
-      border: none;
+      color: #fff;
       padding: 0.6rem 1.5rem;
-      font-weight: bold;
-      border-radius: 4px;
+      border: none;
+      border-radius: 5px;
       cursor: pointer;
+      font-weight: bold;
     }
     footer {
-      padding: 2rem;
+      text-align: center;
+      padding: 2rem 1rem;
       font-size: 0.9rem;
       color: #8b949e;
     }
@@ -101,48 +120,58 @@
 <body>
 
 <header>
-  <img src="banner.jpg" alt="Banner" />
+  <img src="banner.jpg" alt="PJ Banner" />
   <h1>PJ Piatt</h1>
   <div class="rainbow-bar"></div>
   <div class="subtitle">IT Specialist | Cybersecurity Grad Student | Systems & Support Strategist</div>
   <div class="contact">
-    <a href="mailto:workwithpj@icloud.com"><i class="fas fa-envelope"></i> workwithpj@icloud.com</a> |
-    <a href="https://www.linkedin.com/in/pj-piatt" target="_blank">LinkedIn</a> |
-    <a href="https://github.com/pj-piatt/IT-portfolio/blob/main/PJ_Piatt_Resume.pdf" target="_blank">Resume (PDF)</a>
+    <a href="mailto:workwithpj@icloud.com">📧 Email</a> |
+    <a href="https://www.linkedin.com/in/pj-piatt">LinkedIn</a> |
+    <a href="https://github.com/pj-piatt/IT-portfolio/blob/main/PJ_Piatt_Resume.pdf">Resume (PDF)</a>
   </div>
 </header>
 
-<section class="section">
+<section>
   <h2>Projects</h2>
-  <div class="project"><h3>🧠 PowerShell Audit Toolkit</h3><p>GUI: based auditing tool for Active Directory with group scan, password-expiry automation, and CSV reporting.</p><a href="#">View on GitHub</a></div>
-  <div class="project"><h3>🌐 SharePoint Access Manager</h3><p>Manage and audit guest access securely in Microsoft 365 environments.</p><a href="#">View on GitHub</a></div>
-  <div class="project"><h3>🛠️ Intune Remediation Toolkit</h3><p>Remediation scripts and compliance reporting for endpoint management.</p><a href="#">View on GitHub</a></div>
+  <div class="project">
+    <h3>🧠 PowerShell Audit Toolkit</h3>
+    <p>GUI: based auditing tool for Active Directory with group scan, password-expiry automation, and CSV reporting.</p>
+    <a href="#">View on GitHub</a>
+  </div>
+  <div class="project">
+    <h3>🌐 SharePoint Access Manager</h3>
+    <p>Manage and audit guest access securely in Microsoft 365 environments.</p>
+    <a href="#">View on GitHub</a>
+  </div>
+  <div class="project">
+    <h3>🛠️ Intune Remediation Toolkit</h3>
+    <p>Remediation scripts and compliance reporting for endpoint management.</p>
+    <a href="#">View on GitHub</a>
+  </div>
 </section>
 
-<section class="section">
+<section>
   <h2>Blog Posts</h2>
-  <div class="blog-grid">
-    <div class="card"><h3>5 Quick Computer Tips for Beginners</h3><p><small>Apr 24, 2024</small></p></div>
-    <div class="card"><h3>Stay Safe from Phishing Emails</h3><p><small>Apr 24, 2024</small></p></div>
-    <div class="card"><h3>How to Speed Up Your Computer</h3><p><small>Apr 24, 2024</small></p></div>
+  <div class="blog-posts">
+    <div class="card"><h3>5 Quick Computer Tips for Beginners</h3><p>Apr 24, 2024</p></div>
+    <div class="card"><h3>Stay Safe from Phishing Emails</h3><p>Apr 24, 2024</p></div>
+    <div class="card"><h3>How to Speed Up Your Computer</h3><p>Apr 24, 2024</p></div>
   </div>
+  <div class="pagination"><span>1</span> <span>2</span></div>
 </section>
 
-<section class="section">
-  <h2>💻 Tech Stack</h2>
-  <div class="tech-icons">
-    <span>B.S. Information Technology</span>
-    <span>M.S. Data Science</span>
-    <span>M.S. Cybersecurity</span>
-    <span>ITIL Certified</span>
-    <span>PowerShell</span>
-    <span>Microsoft 365</span>
+<section class="tech-contact-wrapper">
+  <div class="tech-stack">
+    <h2>💻 Tech Stack</h2>
+    <span class="badge">B.S. Information Technology</span>
+    <span class="badge">M.S. Data Science</span>
+    <span class="badge">M.S. Cybersecurity</span>
+    <span class="badge">ITIL Certified</span>
+    <span class="badge">PowerShell</span>
+    <span class="badge">Microsoft 365</span>
   </div>
-</section>
-
-<section class="section">
-  <h2>📬 Contact Me</h2>
   <form action="https://formspree.io/f/xblyrwop" method="POST">
+    <h2>📬 Contact Me</h2>
     <input type="text" name="name" placeholder="Your name" required />
     <input type="email" name="_replyto" placeholder="Your email" required />
     <textarea name="message" rows="5" placeholder="Your message" required></textarea>
