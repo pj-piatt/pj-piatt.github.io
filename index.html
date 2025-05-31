@@ -1,358 +1,222 @@
-
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>PJ Piatt | IT Portfolio</title>
-<link href="favicon.ico" rel="icon" type="image/x-icon"/>
-<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet"/>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PJ Piatt | IT Portfolio</title>
+  <link rel="icon" href="favicon.ico" />
+  <meta name="description" content="PJ Piatt | IT Support Specialist | Cybersecurity Student | Portfolio Site" />
+  <meta name="keywords" content="PJ Piatt, IT Support, Cybersecurity, PowerShell, GitHub Pages, Portfolio" />
+  <meta property="og:title" content="PJ Piatt - IT Portfolio" />
+  <meta property="og:description" content="Showcasing PJ Piatt's skills in IT support, automation, and cybersecurity." />
+  <meta property="og:url" content="https://pj-piatt.github.io" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #0d1117;
       color: #c9d1d9;
-      line-height: 1.6;
     }
     header {
       background: linear-gradient(to right, #ff0080, #7928ca, #2afadf);
       padding: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
-    header img {
-      width: 160px;
-      border-radius: 12px;
+      text-align: left;
     }
     .intro {
-      text-align: left;
-    }
-    h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    p {
-      margin: 0.5rem 0 0;
-      font-size: 1.1rem;
+      max-width: 960px;
+      margin: auto;
     }
     .section {
-      padding: 2rem;
-      max-width: 900px;
+      max-width: 960px;
       margin: auto;
-      text-align: left;
+      padding: 2rem;
+    }
+    h1, h2, h3 {
+      color: white;
     }
     .badges img {
       height: 36px;
       margin: 5px;
     }
-    .projects .card {
-      background: #161b22;
-      border: 1px solid #30363d;
+    .project-card {
+      background: #222;
+      padding: 1rem;
       border-radius: 8px;
-      padding: 1rem;
-      margin: 1rem 0;
-    }
-    details {
-      background-color: #0d1117;
-      border: 1px solid #444c56;
-      border-radius: 6px;
-      padding: 0.5rem 1rem;
       margin-bottom: 1rem;
+      transition: all 0.3s;
     }
-    summary {
-      font-weight: bold;
-      cursor: pointer;
+    .project-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
     }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      background: #161b22;
-      padding: 1rem;
-      border-radius: 6px;
-      border: 1px solid #30363d;
-    }
-    input, textarea {
-      padding: 0.5rem;
+    .filter-btn {
+      margin: 5px 10px 20px 0;
+      padding: 8px 14px;
       border: none;
-      border-radius: 4px;
-    }
-    button {
-      padding: 0.5rem;
-      background: #2afadf;
-      border: none;
-      border-radius: 4px;
-      color: #000;
-      font-weight: bold;
+      background-color: #007acc;
+      color: white;
+      border-radius: 5px;
       cursor: pointer;
     }
     footer {
       text-align: center;
-      font-size: 0.8rem;
-      margin: 2rem 0;
-      color: #586069;
+      color: gray;
+      padding: 2rem;
+    }
+    #themeToggle {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      z-index: 999;
+      background: #444;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+    }
+    body.light-theme {
+      background-color: #fff;
+      color: #000;
+    }
+    body.light-theme .project-card {
+      background: #f3f3f3;
+      color: #000;
+    }
+    body.light-theme a {
+      color: #007acc;
     }
   </style>
-<meta content="PJ Piatt | IT Support Specialist | Cybersecurity Student | Portfolio" name="description"/><meta content="PJ Piatt, IT Portfolio, Cybersecurity, PowerShell, GitHub Pages, Technical Support, System Admin" name="keywords"/><meta content="PJ Piatt" name="author"/><meta content="PJ Piatt - IT Portfolio" property="og:title"/><meta content="Showcasing PJ Piatt's skills in IT support, automation, and cybersecurity." property="og:description"/><meta content="website" property="og:type"/><meta content="https://pj-piatt.github.io/assets/banner.jpg" property="og:image"/><meta content="https://pj-piatt.github.io" property="og:url"/></head>
+</head>
 <body>
-<header class="navbar" style="position:fixed;top:0;left:0;width:100%;background:#111;padding:1rem 2rem;z-index:999;border-bottom:1px solid #444;box-shadow:0 1px 4px rgba(0,0,0,0.3);">
-<nav style="display:flex;justify-content:space-between;align-items:center;">
-<h1 style="margin:0;font-size:1.2rem;color:#fff;">PJ Piatt</h1>
-<div style="display:flex;gap:1.5rem;">
-<a href="#about" style="color:#fff;text-decoration:none;">About</a>
-<a href="#projects" style="color:#fff;text-decoration:none;">Projects</a>
-<a href="#contact" style="color:#fff;text-decoration:none;">Contact</a>
-<a href="https://github.com/pj-piatt/IT-portfolio/blob/main/PJ_Piatt_Resume.pdf" style="color:#fff;text-decoration:none;" target="_blank">Resume</a>
-<a href="https://www.linkedin.com/in/pj-piatt" style="color:#fff;text-decoration:none;" target="_blank">LinkedIn</a>
-</div>
-</nav>
-</header>
-<div style="height:80px;"></div>
 
 <header>
-
-<div class="intro">
-<h1>PJ Piatt</h1>
-<p>IT Specialist | Cybersecurity Grad Student | Systems &amp; Support Strategist</p>
-</div>
+  <div class="intro">
+    <h1>PJ Piatt</h1>
+    <p>IT Specialist | Cybersecurity Grad Student | Systems & Support Strategist</p>
+    <p>
+      <a href="mailto:workwithpj@icloud.com">workwithpj@icloud.com</a> |
+      <a href="https://www.linkedin.com/in/pj-piatt" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/pj-piatt/IT-portfolio/blob/main/PJ_Piatt_Resume.pdf" target="_blank">Resume (PDF)</a>
+    </p>
+  </div>
 </header>
-<section class="section" data-aos="fade-up">
-<h2>🚀 Featured Projects</h2>
-<details>
-<summary>🔍 Active Directory Audit Toolkit</summary>
-<div class="card">
-      A PowerShell-based toolkit to audit AD group membership, permissions, and user details with a responsive GUI. Ideal for large enterprise file systems.
-      <br/><a href="https://github.com/pj-piatt/AD-AuditToolkit" target="_blank">View Repository</a>
-</div>
-</details>
-<details>
-<summary>🔐 Password Expiry Notification Script</summary>
-<div class="card">
-      Sends end-user emails when their passwords are set to expire. Includes a styled email template, inline instructions, and log reporting.
-      <br/><a href="https://github.com/pj-piatt/PasswordExpiryReminder" target="_blank">View Repository</a>
-</div>
-</details>
+
+<section class="section" id="education">
+  <h2>🎓 Education & Certifications</h2>
+  <div class="badges">
+    <img src="https://img.shields.io/badge/UMGC-MS%20Cybersecurity-blueviolet" />
+    <img src="https://img.shields.io/badge/UoP-MS%20Data%20Science-orange" />
+    <img src="https://img.shields.io/badge/UoP-BS%20Information%20Tech-lightgray" />
+    <img src="https://img.shields.io/badge/CompTIA-A+-red" />
+    <img src="https://img.shields.io/badge/ITIL-v4-brightgreen" />
+    <img src="https://img.shields.io/badge/Microsoft-IT%20Support-blue" />
+    <img src="https://img.shields.io/badge/Google-IT%20Support-yellowgreen" />
+  </div>
 </section>
-<section class="section" data-aos="fade-up">
-<h2>📜 Certifications &amp; Education</h2>
-<div class="badges">
-<img src="https://img.shields.io/badge/CompTIA-A+-E81C4F?logo=CompTIA&amp;logoColor=white"/>
-<img src="https://img.shields.io/badge/ITIL-v4-blue?logo=ITIL&amp;logoColor=white"/>
-<img src="https://img.shields.io/badge/Microsoft-IT%20Support-blue?logo=microsoft&amp;logoColor=white"/>
-<img src="https://img.shields.io/badge/Master's-Cybersecurity-orange"/>
-<img src="https://img.shields.io/badge/Master's-Data%20Science-yellow"/>
-</div>
+
+<section class="section" id="tech">
+  <h2>🛠 Tech Stack & Tools</h2>
+  <div class="badges">
+    <img src="https://img.shields.io/badge/PowerShell-5391FE?logo=powershell&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Microsoft365-0078D4?logo=microsoft&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Google%20Workspace-4285F4?logo=google&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Jira-0052CC?logo=jira&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Confluence-172B4D?logo=confluence&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Markdown-000000?logo=markdown&logoColor=white"/>
+  </div>
 </section>
-<section class="section" data-aos="fade-up">
-<h2>📬 Contact Me</h2>
-<form action="https://formspree.io/f/xblyrwop" method="POST">
-<input name="name" placeholder="Your name" required="" type="text"/>
-<input name="_replyto" placeholder="Your email" required="" type="email"/>
-<textarea name="message" placeholder="Your message" required="" rows="5"></textarea>
-<input name="_subject" type="hidden" value="New message from your portfolio site"/>
-<input name="_next" type="hidden" value="https://pj-piatt.github.io/thankyou.html"/>
-<button type="submit">Send</button>
-</form>
+
+<section class="section" id="projects">
+  <h2>📁 Projects</h2>
+  <div>
+    <button class="filter-btn" onclick="filterProjects('all')">All</button>
+    <button class="filter-btn" onclick="filterProjects('powershell')">PowerShell</button>
+    <button class="filter-btn" onclick="filterProjects('security')">Security</button>
+    <button class="filter-btn" onclick="filterProjects('automation')">Automation</button>
+  </div>
+
+  <div class="project-card powershell automation">
+    <h3>🔐 PowerShell Audit Toolkit</h3>
+    <p>Audit AD groups, scan user permissions, and export CSV reports via GUI.</p>
+    <a href="https://github.com/pj-piatt/powershell-audit-toolkit" target="_blank">View on GitHub →</a>
+  </div>
+
+  <div class="project-card security">
+    <h3>🌐 SharePoint Access Manager</h3>
+    <p>Manage and audit external guest access in SharePoint using secure automation.</p>
+    <a href="https://github.com/pj-piatt/sharepoint-access-manager" target="_blank">View on GitHub →</a>
+  </div>
+
+  <div class="project-card automation">
+    <h3>🛠️ Intune Remediation Toolkit</h3>
+    <p>Automate endpoint compliance and remediation across devices.</p>
+    <a href="https://github.com/pj-piatt/intune-remediation-toolkit" target="_blank">View on GitHub →</a>
+  </div>
 </section>
+
+<section class="section" id="blog">
+  <h2>📝 Blog</h2>
+  <div class="project-card">
+    <h3>How I Automated Password Expiry Alerts with PowerShell</h3>
+    <p><em>Posted May 2025</em></p>
+    <p>This script scans for users whose passwords are expiring and sends HTML emails with reset instructions.</p>
+    <a href="blog/strong-passwords-matter.html">Read More →</a>
+  </div>
+  <div class="project-card">
+    <h3>Building an Interactive IT Portfolio with GitHub Pages</h3>
+    <p><em>Posted May 2025</em></p>
+    <p>How I used HTML, CSS, GitHub API, and JavaScript to build this custom interactive portfolio.</p>
+    <a href="blog/simple-email-trick.html">Read More →</a>
+  </div>
+</section>
+
+<section class="section" id="github">
+  <h2>📊 GitHub Stats</h2>
+  <img src="https://github-profile-trophy.vercel.app/?username=pj-piatt&theme=onedark" width="100%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=pj-piatt&show_icons=true&theme=dark" width="100%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pj-piatt&layout=compact&theme=dark" width="100%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=pj-piatt&theme=dark" width="100%" />
+</section>
+
+<section class="section" id="connect">
+  <h2>📬 Connect with Me</h2>
+  <p>
+    <a href="mailto:workwithpj@icloud.com">📧 Email</a> |
+    <a href="https://www.linkedin.com/in/pj-piatt" target="_blank">🔗 LinkedIn</a> |
+    <a href="https://github.com/pj-piatt/IT-portfolio/blob/main/PJ_Piatt_Resume.pdf" target="_blank">📄 Resume (PDF)</a>
+  </p>
+</section>
+
 <footer>
-  © 2025 PJ Piatt. All rights reserved.
+  &copy; 2025 PJ Piatt • Built with 💻 GitHub Pages
 </footer>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
 
-<!-- === INTERACTIVE SCRIPTS === -->
+<button id="themeToggle">🌓 Toggle Theme</button>
 
-<!-- Typewriter Effect -->
-<script>
-  const roles = ["IT Specialist", "Cybersecurity Grad Student", "Systems Strategist", "PowerShell Scripter"];
-  let i = 0, j = 0, current = '', isDeleting = false;
-  function type() {
-    let output = document.getElementById("typewriter");
-    if (i < roles.length) {
-      current = roles[i];
-      output.innerHTML = isDeleting ? current.substring(0, j--) : current.substring(0, j++);
-      if (!isDeleting && j === current.length + 1) { isDeleting = true; setTimeout(type, 1500); return; }
-      if (isDeleting && j === 0) { isDeleting = false; i = (i + 1) % roles.length; }
-      setTimeout(type, 100);
-    }
-  }
-  type();
-</script>
-
-<!-- Scroll Progress Bar -->
-<div id="progressBar"></div>
-<style>
-#progressBar {
-  position: fixed; top: 0; left: 0; height: 4px; background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-  z-index: 9999; width: 0%;
-}
-</style>
-<script>
-window.onscroll = () => {
-  const doc = document.documentElement;
-  const scrollPercent = (doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100;
-  document.getElementById("progressBar").style.width = scrollPercent + "%";
-}
-</script>
-
-<!-- Project Card Hover Styles -->
-<style>
-.project-card {
-  background: #222; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.project-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-}
-.project-card a {
-  color: #0af; text-decoration: none;
-}
-</style>
-
-<!-- Filterable Project Scripts -->
 <script>
 function filterProjects(skill) {
-  const projects = document.querySelectorAll('.project');
-  projects.forEach(p => {
+  const cards = document.querySelectorAll('.project-card');
+  cards.forEach(p => {
     p.style.display = skill === 'all' || p.classList.contains(skill) ? 'block' : 'none';
   });
 }
-</script>
 
-
-<!-- === MODAL POPUP === -->
-<div id="infoModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>📌 Project Details</h2>
-    <p>This section can be dynamically populated or customized per project.</p>
-  </div>
-</div>
-
-<style>
-.modal {
-  display: none; position: fixed; z-index: 1000; left: 0; top: 0;
-  width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6);
-}
-.modal-content {
-  background-color: #333; color: #fff; margin: 10% auto; padding: 20px;
-  border-radius: 8px; width: 80%; max-width: 500px;
-}
-.close {
-  color: #aaa; float: right; font-size: 28px; font-weight: bold;
-}
-.close:hover, .close:focus {
-  color: white; text-decoration: none; cursor: pointer;
-}
-</style>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("infoModal");
-  const triggerButtons = document.querySelectorAll(".project-card");
-  const closeBtn = document.querySelector(".close");
-
-  triggerButtons.forEach(btn => {
-    btn.addEventListener("click", () => modal.style.display = "block");
-  });
-
-  closeBtn.onclick = () => modal.style.display = "none";
-  window.onclick = (event) => {
-    if (event.target == modal) modal.style.display = "none";
-  };
-});
-</script>
-
-<!-- === THEME TOGGLE === -->
-<div style="position: fixed; bottom: 10px; right: 10px; z-index: 999;">
-  <button id="themeToggle" style="padding: 10px 15px; border-radius: 6px; background: #444; color: #fff; border: none;">Toggle Theme</button>
-</div>
-
-<script>
 document.addEventListener("DOMContentLoaded", () => {
   const toggleButton = document.getElementById("themeToggle");
+  const currentTheme = localStorage.getItem("theme");
+  if (currentTheme === "light") document.body.classList.add("light-theme");
+
   toggleButton.addEventListener("click", () => {
     document.body.classList.toggle("light-theme");
+    localStorage.setItem("theme", document.body.classList.contains("light-theme") ? "light" : "dark");
   });
 });
 </script>
 
-<style>
-body.light-theme {
-  background-color: #fff;
-  color: #000;
-}
-body.light-theme a {
-  color: #007acc;
-}
-body.light-theme .project-card {
-  background-color: #f2f2f2;
-  color: #000;
-}
-body.light-theme .modal-content {
-  background-color: #fff;
-  color: #000;
-}
-</style>
-
-
-<!-- === GITHUB STATS SECTION === -->
-<section class="section" data-aos="fade-up">
-  <h2>📊 GitHub Project Stats</h2>
-  <div id="repo-stats"></div>
-</section>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const username = "pj-piatt";
-  const repoList = ["IT-portfolio", "AuditToolkit", "Password-Expiry-Reminder"]; // Add more repos if needed
-  const statsContainer = document.getElementById("repo-stats");
-
-  repoList.forEach(repo => {
-    fetch(`https://api.github.com/repos/${username}/${repo}`)
-      .then(response => response.json())
-      .then(data => {
-        const repoCard = document.createElement("div");
-        repoCard.className = "repo-stat";
-        repoCard.innerHTML = `
-          <h3><a href="${data.html_url}" target="_blank">${data.name}</a></h3>
-          ⭐ Stars: ${data.stargazers_count} | 🍴 Forks: ${data.forks_count} | 👁 Watchers: ${data.watchers_count}<br>
-          📅 Last updated: ${new Date(data.updated_at).toLocaleDateString()}
-        `;
-        statsContainer.appendChild(repoCard);
-      })
-      .catch(error => console.error("Error loading repo:", repo, error));
-  });
-});
-</script>
-
-<style>
-.repo-stat {
-  background: #1e1e1e;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  color: #eee;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-}
-.repo-stat h3 {
-  margin: 0;
-  color: #4ea1d3;
-}
-.repo-stat a {
-  color: #4ea1d3;
-  text-decoration: none;
-}
-.repo-stat a:hover {
-  text-decoration: underline;
-}
-</style>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>AOS.init();</script>
 
 </body>
 </html>
