@@ -1,201 +1,358 @@
+
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PJ Piatt | IT Portfolio</title>
-  <meta name="description" content="Explore PJ Piatt's IT portfolio featuring automation scripts, cybersecurity projects, and system administration tools with a focus on PowerShell, MFA, SSO, and scalable IT support solutions." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-light: #f9fafb;
-      --text-light: #1f2937;
-      --bg-dark: #1e293b;
-      --text-dark: #f8fafc;
-      --accent: #3b82f6;
-      --card-bg-light: #ffffff;
-      --card-bg-dark: #334155;
-    }
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PJ Piatt | IT Portfolio</title>
+<link href="favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet"/>
+<style>
     body {
-      font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: var(--bg-light);
-      color: var(--text-light);
-      transition: background-color 0.3s, color 0.3s;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      line-height: 1.6;
     }
-
-    .dark-mode {
-      background-color: var(--bg-dark);
-      color: var(--text-dark);
-    }
-
     header {
-      text-align: center;
-      padding: 2rem 1rem 1rem;
+      background: linear-gradient(to right, #ff0080, #7928ca, #2afadf);
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
     }
-
+    header img {
+      width: 160px;
+      border-radius: 12px;
+    }
+    .intro {
+      text-align: left;
+    }
     h1 {
-      font-size: 2.75rem;
-      margin-bottom: 0.25rem;
+      margin: 0;
+      font-size: 2.5rem;
     }
-
-    h2 {
-      font-size: 1.75rem;
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    p, li {
-      font-size: 1rem;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .toggle-theme {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      padding: 0.5rem 1rem;
-      background: var(--accent);
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 1rem;
-    }
-
-    .project-card {
-      background-color: var(--card-bg-light);
-      border-radius: 8px;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-      transition: background-color 0.3s;
-    }
-
-    .dark-mode .project-card {
-      background-color: var(--card-bg-dark);
-    }
-
-    details summary {
-      cursor: pointer;
-      font-weight: bold;
+    p {
+      margin: 0.5rem 0 0;
       font-size: 1.1rem;
     }
-
-    .stats img {
-      max-width: 100%;
-      display: block;
-      margin: 0 auto 1rem;
+    .section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      text-align: left;
     }
-
+    .badges img {
+      height: 36px;
+      margin: 5px;
+    }
+    .projects .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    details {
+      background-color: #0d1117;
+      border: 1px solid #444c56;
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1rem;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+    }
     form {
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
-      max-width: 500px;
-      margin: 0 auto;
+      gap: 1rem;
+      background: #161b22;
+      padding: 1rem;
+      border-radius: 6px;
+      border: 1px solid #30363d;
     }
-
     input, textarea {
-      padding: 0.75rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      width: 100%;
-    }
-
-    button[type="submit"] {
-      background-color: var(--accent);
-      color: white;
+      padding: 0.5rem;
       border: none;
-      padding: 0.75rem;
-      border-radius: 6px;
+      border-radius: 4px;
+    }
+    button {
+      padding: 0.5rem;
+      background: #2afadf;
+      border: none;
+      border-radius: 4px;
+      color: #000;
       font-weight: bold;
       cursor: pointer;
     }
-
-    button[type="submit"]:hover {
-      background-color: #2563eb;
-    }
-
     footer {
       text-align: center;
-      margin-top: 3rem;
-      padding: 1rem 0;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
+      margin: 2rem 0;
+      color: #586069;
     }
   </style>
-</head>
+<meta content="PJ Piatt | IT Support Specialist | Cybersecurity Student | Portfolio" name="description"/><meta content="PJ Piatt, IT Portfolio, Cybersecurity, PowerShell, GitHub Pages, Technical Support, System Admin" name="keywords"/><meta content="PJ Piatt" name="author"/><meta content="PJ Piatt - IT Portfolio" property="og:title"/><meta content="Showcasing PJ Piatt's skills in IT support, automation, and cybersecurity." property="og:description"/><meta content="website" property="og:type"/><meta content="https://pj-piatt.github.io/assets/banner.jpg" property="og:image"/><meta content="https://pj-piatt.github.io" property="og:url"/></head>
 <body>
-  <button class="toggle-theme" onclick="document.body.classList.toggle('dark-mode')">🌓 Toggle Theme</button>
+<header class="navbar" style="position:fixed;top:0;left:0;width:100%;background:#111;padding:1rem 2rem;z-index:999;border-bottom:1px solid #444;box-shadow:0 1px 4px rgba(0,0,0,0.3);">
+<nav style="display:flex;justify-content:space-between;align-items:center;">
+<h1 style="margin:0;font-size:1.2rem;color:#fff;">PJ Piatt</h1>
+<div style="display:flex;gap:1.5rem;">
+<a href="#about" style="color:#fff;text-decoration:none;">About</a>
+<a href="#projects" style="color:#fff;text-decoration:none;">Projects</a>
+<a href="#contact" style="color:#fff;text-decoration:none;">Contact</a>
+<a href="https://github.com/pj-piatt/IT-portfolio/blob/main/PJ_Piatt_Resume.pdf" style="color:#fff;text-decoration:none;" target="_blank">Resume</a>
+<a href="https://www.linkedin.com/in/pj-piatt" style="color:#fff;text-decoration:none;" target="_blank">LinkedIn</a>
+</div>
+</nav>
+</header>
+<div style="height:80px;"></div>
 
-  <header>
-    <h1>PJ Piatt</h1>
-    <p><strong>IT Specialist | Cybersecurity Grad Student | Systems & Support Strategist</strong></p>
-    <p><a href="mailto:workwithpj@icloud.com">workwithpj@icloud.com</a> | <a href="https://www.linkedin.com/in/pj-piatt" target="_blank">LinkedIn</a> | <a href="https://github.com/pj-piatt/IT-portfolio/blob/main/PJ_Piatt_Resume.pdf" target="_blank">Resume (PDF)</a></p>
-  </header>
+<header>
+<img alt="PJ Piatt Banner" src="banner.jpg"/>
+<div class="intro">
+<h1>PJ Piatt</h1>
+<p>IT Specialist | Cybersecurity Grad Student | Systems &amp; Support Strategist</p>
+</div>
+</header>
+<section class="section" data-aos="fade-up">
+<h2>🚀 Featured Projects</h2>
+<details>
+<summary>🔍 Active Directory Audit Toolkit</summary>
+<div class="card">
+      A PowerShell-based toolkit to audit AD group membership, permissions, and user details with a responsive GUI. Ideal for large enterprise file systems.
+      <br/><a href="https://github.com/pj-piatt/AD-AuditToolkit" target="_blank">View Repository</a>
+</div>
+</details>
+<details>
+<summary>🔐 Password Expiry Notification Script</summary>
+<div class="card">
+      Sends end-user emails when their passwords are set to expire. Includes a styled email template, inline instructions, and log reporting.
+      <br/><a href="https://github.com/pj-piatt/PasswordExpiryReminder" target="_blank">View Repository</a>
+</div>
+</details>
+</section>
+<section class="section" data-aos="fade-up">
+<h2>📜 Certifications &amp; Education</h2>
+<div class="badges">
+<img src="https://img.shields.io/badge/CompTIA-A+-E81C4F?logo=CompTIA&amp;logoColor=white"/>
+<img src="https://img.shields.io/badge/ITIL-v4-blue?logo=ITIL&amp;logoColor=white"/>
+<img src="https://img.shields.io/badge/Microsoft-IT%20Support-blue?logo=microsoft&amp;logoColor=white"/>
+<img src="https://img.shields.io/badge/Master's-Cybersecurity-orange"/>
+<img src="https://img.shields.io/badge/Master's-Data%20Science-yellow"/>
+</div>
+</section>
+<section class="section" data-aos="fade-up">
+<h2>📬 Contact Me</h2>
+<form action="https://formspree.io/f/xblyrwop" method="POST">
+<input name="name" placeholder="Your name" required="" type="text"/>
+<input name="_replyto" placeholder="Your email" required="" type="email"/>
+<textarea name="message" placeholder="Your message" required="" rows="5"></textarea>
+<input name="_subject" type="hidden" value="New message from your portfolio site"/>
+<input name="_next" type="hidden" value="https://pj-piatt.github.io/thankyou.html"/>
+<button type="submit">Send</button>
+</form>
+</section>
+<footer>
+  © 2025 PJ Piatt. All rights reserved.
+</footer>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
-  <div class="container">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <details open>
-        <summary>🔐 PowerShell Audit Toolkit</summary>
-        <p>GUI-based auditing tool for Active Directory with group scan, password expiry automation, and CSV reporting.</p>
-        <a href="https://github.com/pj-piatt/powershell-audit-toolkit" target="_blank">View on GitHub</a>
-      </details>
-    </div>
-    <div class="project-card">
-      <details>
-        <summary>🌐 SharePoint Access Manager</summary>
-        <p>Manage and audit guest access securely in Microsoft 365 environments.</p>
-      </details>
-    </div>
-    <div class="project-card">
-      <details>
-        <summary>🛡 Intune Remediation Toolkit</summary>
-        <p>Remediation scripts and compliance reporting for endpoint management.</p>
-      </details>
-    </div>
+<!-- === INTERACTIVE SCRIPTS === -->
 
-    <h2>GitHub Activity</h2>
-    <div class="stats">
-      <img src="https://github-readme-stats.vercel.app/api?username=pj-piatt&show_icons=true&theme=default" alt="PJ's GitHub Stats" />
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=pj-piatt&theme=default" alt="GitHub Streak" />
-    </div>
-
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/mnqedgzg" method="POST">
-      <input type="text" name="name" placeholder="Your name" required />
-      <input type="email" name="_replyto" placeholder="Your email" required />
-      <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 PJ Piatt. All rights reserved.</p>
-  </footer>
-
-  <script>
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.body.classList.add('dark-mode');
+<!-- Typewriter Effect -->
+<script>
+  const roles = ["IT Specialist", "Cybersecurity Grad Student", "Systems Strategist", "PowerShell Scripter"];
+  let i = 0, j = 0, current = '', isDeleting = false;
+  function type() {
+    let output = document.getElementById("typewriter");
+    if (i < roles.length) {
+      current = roles[i];
+      output.innerHTML = isDeleting ? current.substring(0, j--) : current.substring(0, j++);
+      if (!isDeleting && j === current.length + 1) { isDeleting = true; setTimeout(type, 1500); return; }
+      if (isDeleting && j === 0) { isDeleting = false; i = (i + 1) % roles.length; }
+      setTimeout(type, 100);
     }
-  </script>
+  }
+  type();
+</script>
+
+<!-- Scroll Progress Bar -->
+<div id="progressBar"></div>
+<style>
+#progressBar {
+  position: fixed; top: 0; left: 0; height: 4px; background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  z-index: 9999; width: 0%;
+}
+</style>
+<script>
+window.onscroll = () => {
+  const doc = document.documentElement;
+  const scrollPercent = (doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100;
+  document.getElementById("progressBar").style.width = scrollPercent + "%";
+}
+</script>
+
+<!-- Project Card Hover Styles -->
+<style>
+.project-card {
+  background: #222; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+.project-card a {
+  color: #0af; text-decoration: none;
+}
+</style>
+
+<!-- Filterable Project Scripts -->
+<script>
+function filterProjects(skill) {
+  const projects = document.querySelectorAll('.project');
+  projects.forEach(p => {
+    p.style.display = skill === 'all' || p.classList.contains(skill) ? 'block' : 'none';
+  });
+}
+</script>
+
+
+<!-- === MODAL POPUP === -->
+<div id="infoModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>📌 Project Details</h2>
+    <p>This section can be dynamically populated or customized per project.</p>
+  </div>
+</div>
+
+<style>
+.modal {
+  display: none; position: fixed; z-index: 1000; left: 0; top: 0;
+  width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6);
+}
+.modal-content {
+  background-color: #333; color: #fff; margin: 10% auto; padding: 20px;
+  border-radius: 8px; width: 80%; max-width: 500px;
+}
+.close {
+  color: #aaa; float: right; font-size: 28px; font-weight: bold;
+}
+.close:hover, .close:focus {
+  color: white; text-decoration: none; cursor: pointer;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("infoModal");
+  const triggerButtons = document.querySelectorAll(".project-card");
+  const closeBtn = document.querySelector(".close");
+
+  triggerButtons.forEach(btn => {
+    btn.addEventListener("click", () => modal.style.display = "block");
+  });
+
+  closeBtn.onclick = () => modal.style.display = "none";
+  window.onclick = (event) => {
+    if (event.target == modal) modal.style.display = "none";
+  };
+});
+</script>
+
+<!-- === THEME TOGGLE === -->
+<div style="position: fixed; bottom: 10px; right: 10px; z-index: 999;">
+  <button id="themeToggle" style="padding: 10px 15px; border-radius: 6px; background: #444; color: #fff; border: none;">Toggle Theme</button>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleButton = document.getElementById("themeToggle");
+  toggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("light-theme");
+  });
+});
+</script>
+
+<style>
+body.light-theme {
+  background-color: #fff;
+  color: #000;
+}
+body.light-theme a {
+  color: #007acc;
+}
+body.light-theme .project-card {
+  background-color: #f2f2f2;
+  color: #000;
+}
+body.light-theme .modal-content {
+  background-color: #fff;
+  color: #000;
+}
+</style>
+
+
+<!-- === GITHUB STATS SECTION === -->
+<section class="section" data-aos="fade-up">
+  <h2>📊 GitHub Project Stats</h2>
+  <div id="repo-stats"></div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const username = "pj-piatt";
+  const repoList = ["IT-portfolio", "AuditToolkit", "Password-Expiry-Reminder"]; // Add more repos if needed
+  const statsContainer = document.getElementById("repo-stats");
+
+  repoList.forEach(repo => {
+    fetch(`https://api.github.com/repos/${username}/${repo}`)
+      .then(response => response.json())
+      .then(data => {
+        const repoCard = document.createElement("div");
+        repoCard.className = "repo-stat";
+        repoCard.innerHTML = `
+          <h3><a href="${data.html_url}" target="_blank">${data.name}</a></h3>
+          ⭐ Stars: ${data.stargazers_count} | 🍴 Forks: ${data.forks_count} | 👁 Watchers: ${data.watchers_count}<br>
+          📅 Last updated: ${new Date(data.updated_at).toLocaleDateString()}
+        `;
+        statsContainer.appendChild(repoCard);
+      })
+      .catch(error => console.error("Error loading repo:", repo, error));
+  });
+});
+</script>
+
+<style>
+.repo-stat {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  color: #eee;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.repo-stat h3 {
+  margin: 0;
+  color: #4ea1d3;
+}
+.repo-stat a {
+  color: #4ea1d3;
+  text-decoration: none;
+}
+.repo-stat a:hover {
+  text-decoration: underline;
+}
+</style>
+
 </body>
 </html>
