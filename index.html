@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,218 +6,153 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PJ Piatt | IT Portfolio</title>
   <link rel="icon" href="favicon.ico" />
-  <meta name="description" content="PJ Piatt | IT Support Specialist | Cybersecurity Student | Portfolio Site" />
-  <meta name="keywords" content="PJ Piatt, IT Support, Cybersecurity, PowerShell, GitHub Pages, Portfolio" />
-  <meta property="og:title" content="PJ Piatt - IT Portfolio" />
-  <meta property="og:description" content="Showcasing PJ Piatt's skills in IT support, automation, and cybersecurity." />
-  <meta property="og:url" content="https://pj-piatt.github.io" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #0d1117;
       color: #c9d1d9;
+      text-align: center;
     }
-    header {
-      background: linear-gradient(to right, #ff0080, #7928ca, #2afadf);
-      padding: 2rem;
-      text-align: left;
-    }
-    .intro {
-      max-width: 960px;
+    header img {
+      width: 100%;
+      max-width: 900px;
       margin: auto;
+      display: block;
+    }
+    h1 {
+      font-size: 2.4rem;
+      margin: 0.5rem 0 0.2rem;
+    }
+    .subtitle, .contact a {
+      font-weight: 600;
+    }
+    .rainbow-bar {
+      height: 4px;
+      width: 200px;
+      margin: 0.5rem auto;
+      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+      border-radius: 2px;
+    }
+    .contact a {
+      color: #58a6ff;
+      margin: 0 8px;
+      text-decoration: none;
     }
     .section {
+      padding: 2rem 1rem;
       max-width: 960px;
       margin: auto;
-      padding: 2rem;
     }
-    h1, h2, h3 {
-      color: white;
-    }
-    .badges img {
-      height: 36px;
-      margin: 5px;
-    }
-    .project-card {
-      background: #222;
+    .project, .card, form {
+      background: #161b22;
       padding: 1rem;
       border-radius: 8px;
       margin-bottom: 1rem;
-      transition: all 0.3s;
     }
-    .project-card:hover {
-      transform: scale(1.02);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    .blog-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
     }
-    .filter-btn {
-      margin: 5px 10px 20px 0;
-      padding: 8px 14px;
-      border: none;
-      background-color: #007acc;
+    .blog-grid .card {
+      width: 280px;
+      text-align: left;
+    }
+    .tech-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .tech-icons span {
+      background: #21262d;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0.4rem 0;
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 4px;
       color: white;
-      border-radius: 5px;
+    }
+    form button {
+      background: #238636;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.5rem;
+      font-weight: bold;
+      border-radius: 4px;
       cursor: pointer;
     }
     footer {
-      text-align: center;
-      color: gray;
       padding: 2rem;
-    }
-    #themeToggle {
-      position: fixed;
-      bottom: 10px;
-      right: 10px;
-      z-index: 999;
-      background: #444;
-      color: white;
-      padding: 10px 15px;
-      border-radius: 6px;
-      border: none;
-      cursor: pointer;
-    }
-    body.light-theme {
-      background-color: #fff;
-      color: #000;
-    }
-    body.light-theme .project-card {
-      background: #f3f3f3;
-      color: #000;
-    }
-    body.light-theme a {
-      color: #007acc;
+      font-size: 0.9rem;
+      color: #8b949e;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="intro">
-    <h1>PJ Piatt</h1>
-    <p>IT Specialist | Cybersecurity Grad Student | Systems & Support Strategist</p>
-    <p>
-      <a href="mailto:workwithpj@icloud.com">workwithpj@icloud.com</a> |
-      <a href="https://www.linkedin.com/in/pj-piatt" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/pj-piatt/IT-portfolio/blob/main/PJ_Piatt_Resume.pdf" target="_blank">Resume (PDF)</a>
-    </p>
+  <img src="banner.jpg" alt="Banner" />
+  <h1>PJ Piatt</h1>
+  <div class="rainbow-bar"></div>
+  <div class="subtitle">IT Specialist | Cybersecurity Grad Student | Systems & Support Strategist</div>
+  <div class="contact">
+    <a href="mailto:workwithpj@icloud.com"><i class="fas fa-envelope"></i> workwithpj@icloud.com</a> |
+    <a href="https://www.linkedin.com/in/pj-piatt" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/pj-piatt/IT-portfolio/blob/main/PJ_Piatt_Resume.pdf" target="_blank">Resume (PDF)</a>
   </div>
 </header>
 
-<section class="section" id="education">
-  <h2>🎓 Education & Certifications</h2>
-  <div class="badges">
-    <img src="https://img.shields.io/badge/UMGC-MS%20Cybersecurity-blueviolet" />
-    <img src="https://img.shields.io/badge/UoP-MS%20Data%20Science-orange" />
-    <img src="https://img.shields.io/badge/UoP-BS%20Information%20Tech-lightgray" />
-    <img src="https://img.shields.io/badge/CompTIA-A+-red" />
-    <img src="https://img.shields.io/badge/ITIL-v4-brightgreen" />
-    <img src="https://img.shields.io/badge/Microsoft-IT%20Support-blue" />
-    <img src="https://img.shields.io/badge/Google-IT%20Support-yellowgreen" />
+<section class="section">
+  <h2>Projects</h2>
+  <div class="project"><h3>🧠 PowerShell Audit Toolkit</h3><p>GUI: based auditing tool for Active Directory with group scan, password-expiry automation, and CSV reporting.</p><a href="#">View on GitHub</a></div>
+  <div class="project"><h3>🌐 SharePoint Access Manager</h3><p>Manage and audit guest access securely in Microsoft 365 environments.</p><a href="#">View on GitHub</a></div>
+  <div class="project"><h3>🛠️ Intune Remediation Toolkit</h3><p>Remediation scripts and compliance reporting for endpoint management.</p><a href="#">View on GitHub</a></div>
+</section>
+
+<section class="section">
+  <h2>Blog Posts</h2>
+  <div class="blog-grid">
+    <div class="card"><h3>5 Quick Computer Tips for Beginners</h3><p><small>Apr 24, 2024</small></p></div>
+    <div class="card"><h3>Stay Safe from Phishing Emails</h3><p><small>Apr 24, 2024</small></p></div>
+    <div class="card"><h3>How to Speed Up Your Computer</h3><p><small>Apr 24, 2024</small></p></div>
   </div>
 </section>
 
-<section class="section" id="tech">
-  <h2>🛠 Tech Stack & Tools</h2>
-  <div class="badges">
-    <img src="https://img.shields.io/badge/PowerShell-5391FE?logo=powershell&logoColor=white"/>
-    <img src="https://img.shields.io/badge/Microsoft365-0078D4?logo=microsoft&logoColor=white"/>
-    <img src="https://img.shields.io/badge/Google%20Workspace-4285F4?logo=google&logoColor=white"/>
-    <img src="https://img.shields.io/badge/Jira-0052CC?logo=jira&logoColor=white"/>
-    <img src="https://img.shields.io/badge/Confluence-172B4D?logo=confluence&logoColor=white"/>
-    <img src="https://img.shields.io/badge/Markdown-000000?logo=markdown&logoColor=white"/>
+<section class="section">
+  <h2>💻 Tech Stack</h2>
+  <div class="tech-icons">
+    <span>B.S. Information Technology</span>
+    <span>M.S. Data Science</span>
+    <span>M.S. Cybersecurity</span>
+    <span>ITIL Certified</span>
+    <span>PowerShell</span>
+    <span>Microsoft 365</span>
   </div>
 </section>
 
-<section class="section" id="projects">
-  <h2>📁 Projects</h2>
-  <div>
-    <button class="filter-btn" onclick="filterProjects('all')">All</button>
-    <button class="filter-btn" onclick="filterProjects('powershell')">PowerShell</button>
-    <button class="filter-btn" onclick="filterProjects('security')">Security</button>
-    <button class="filter-btn" onclick="filterProjects('automation')">Automation</button>
-  </div>
-
-  <div class="project-card powershell automation">
-    <h3>🔐 PowerShell Audit Toolkit</h3>
-    <p>Audit AD groups, scan user permissions, and export CSV reports via GUI.</p>
-    <a href="https://github.com/pj-piatt/powershell-audit-toolkit" target="_blank">View on GitHub →</a>
-  </div>
-
-  <div class="project-card security">
-    <h3>🌐 SharePoint Access Manager</h3>
-    <p>Manage and audit external guest access in SharePoint using secure automation.</p>
-    <a href="https://github.com/pj-piatt/sharepoint-access-manager" target="_blank">View on GitHub →</a>
-  </div>
-
-  <div class="project-card automation">
-    <h3>🛠️ Intune Remediation Toolkit</h3>
-    <p>Automate endpoint compliance and remediation across devices.</p>
-    <a href="https://github.com/pj-piatt/intune-remediation-toolkit" target="_blank">View on GitHub →</a>
-  </div>
-</section>
-
-<section class="section" id="blog">
-  <h2>📝 Blog</h2>
-  <div class="project-card">
-    <h3>How I Automated Password Expiry Alerts with PowerShell</h3>
-    <p><em>Posted May 2025</em></p>
-    <p>This script scans for users whose passwords are expiring and sends HTML emails with reset instructions.</p>
-    <a href="blog/strong-passwords-matter.html">Read More →</a>
-  </div>
-  <div class="project-card">
-    <h3>Building an Interactive IT Portfolio with GitHub Pages</h3>
-    <p><em>Posted May 2025</em></p>
-    <p>How I used HTML, CSS, GitHub API, and JavaScript to build this custom interactive portfolio.</p>
-    <a href="blog/simple-email-trick.html">Read More →</a>
-  </div>
-</section>
-
-<section class="section" id="github">
-  <h2>📊 GitHub Stats</h2>
-  <img src="https://github-profile-trophy.vercel.app/?username=pj-piatt&theme=onedark" width="100%" />
-  <img src="https://github-readme-stats.vercel.app/api?username=pj-piatt&show_icons=true&theme=dark" width="100%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pj-piatt&layout=compact&theme=dark" width="100%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=pj-piatt&theme=dark" width="100%" />
-</section>
-
-<section class="section" id="connect">
-  <h2>📬 Connect with Me</h2>
-  <p>
-    <a href="mailto:workwithpj@icloud.com">📧 Email</a> |
-    <a href="https://www.linkedin.com/in/pj-piatt" target="_blank">🔗 LinkedIn</a> |
-    <a href="https://github.com/pj-piatt/IT-portfolio/blob/main/PJ_Piatt_Resume.pdf" target="_blank">📄 Resume (PDF)</a>
-  </p>
+<section class="section">
+  <h2>📬 Contact Me</h2>
+  <form action="https://formspree.io/f/xblyrwop" method="POST">
+    <input type="text" name="name" placeholder="Your name" required />
+    <input type="email" name="_replyto" placeholder="Your email" required />
+    <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
 </section>
 
 <footer>
   &copy; 2025 PJ Piatt • Built with 💻 GitHub Pages
 </footer>
-
-<button id="themeToggle">🌓 Toggle Theme</button>
-
-<script>
-function filterProjects(skill) {
-  const cards = document.querySelectorAll('.project-card');
-  cards.forEach(p => {
-    p.style.display = skill === 'all' || p.classList.contains(skill) ? 'block' : 'none';
-  });
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleButton = document.getElementById("themeToggle");
-  const currentTheme = localStorage.getItem("theme");
-  if (currentTheme === "light") document.body.classList.add("light-theme");
-
-  toggleButton.addEventListener("click", () => {
-    document.body.classList.toggle("light-theme");
-    localStorage.setItem("theme", document.body.classList.contains("light-theme") ? "light" : "dark");
-  });
-});
-</script>
-
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>AOS.init();</script>
 
 </body>
 </html>
