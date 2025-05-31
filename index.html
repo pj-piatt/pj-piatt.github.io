@@ -144,7 +144,75 @@
 
     a:hover {
       text-decoration: underline;
-    }
+    .tech-contact-container {
+  margin-top: 40px;
+}
+
+.tech-contact {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.badge-section,
+.contact-form {
+  flex: 1 1 48%;
+  background-color: #162739;
+  padding: 20px;
+  border-radius: 8px;
+  color: #f0f0f0;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #1D2029;
+  color: #f0f0f0;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form button {
+  align-self: flex-start;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #4999ED;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #3a85d6;
+}
+
+@media (max-width: 900px) {
+  .tech-contact {
+    flex-direction: column;
+  }
+
+  .badge-section,
+  .contact-form {
+    flex: 1 1 100%;
+  }
+}
+
   </style>
   <script>
     function toggleProject(element) {
@@ -212,24 +280,32 @@
     <div class="pagination"><span>&lt;</span> <span>1</span> <span>2</span> <span>&gt;</span></div>
   </section>
 
-  <section class="tech-contact-container">
-    <h2>🛠️ Tech Stack</h2>
-    <div class="tech-contact">
-      <div class="badge-section">
-        <p><span>💻</span> PowerShell, Intune, Azure AD, SharePoint, Microsoft 365</p>
-        <p><span>🛡️</span> Proofpoint, GlobalProtect VPN, MFA/SSO</p>
-      </div>
-      <div class="contact-form">
-        <h2>📬 Contact Me</h2>
-        <form action="https://formspree.io/f/xblyrwop" method="POST">
-          <input type="text" name="name" placeholder="Your name" required />
-          <input type="email" name="_replyto" placeholder="Your email" required />
-          <textarea name="message" rows="5" placeholder="Your message" required></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </div>
+ <section class="tech-contact-container">
+  <div class="tech-contact">
+    <div class="badge-section">
+      <h2>🛠️ Tech Stack</h2>
+      <ul>
+        <li>PowerShell</li>
+        <li>Microsoft 365</li>
+        <li>Azure AD</li>
+        <li>SharePoint</li>
+        <li>SSO & MFA</li>
+        <li>Proofpoint</li>
+        <li>GlobalProtect VPN</li>
+        <li>Jira / Confluence</li>
+      </ul>
     </div>
-  </section>
+    <div class="contact-form">
+      <h2>📬 Contact Me</h2>
+      <form action="https://formspree.io/f/xblyrwop" method="POST">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="_replyto" placeholder="Your email" required />
+        <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</section>
 
   <footer>
     <p>© 2025 PJ Piatt. Made with ❤️</p>
