@@ -2,200 +2,162 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PJ Piatt | IT Portfolio</title>
-  <meta name="description" content="Explore PJ Piatt's IT portfolio featuring automation scripts, cybersecurity projects, and system administration tools with a focus on PowerShell, MFA, SSO, and scalable IT support solutions." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <style>
-    :root {
-      --bg-light: #f9fafb;
-      --text-light: #1f2937;
-      --bg-dark: #1e293b;
-      --text-dark: #f8fafc;
-      --accent: #3b82f6;
-      --card-bg-light: #ffffff;
-      --card-bg-dark: #334155;
-    }
-
     body {
-      font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: var(--bg-light);
-      color: var(--text-light);
-      transition: background-color 0.3s, color 0.3s;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      line-height: 1.6;
     }
-
-    .dark-mode {
-      background-color: var(--bg-dark);
-      color: var(--text-dark);
-    }
-
     header {
+      background: linear-gradient(to right, #ff0080, #7928ca, #2afadf);
+      padding: 2rem 1rem;
       text-align: center;
-      padding: 2rem 1rem 1rem;
     }
-
-    h1 {
-      font-size: 2.75rem;
-      margin-bottom: 0.25rem;
-    }
-
-    h2 {
-      font-size: 1.75rem;
-      margin-top: 2.5rem;
+    header img {
+      width: 120px;
+      border-radius: 50%;
       margin-bottom: 1rem;
-      text-align: center;
     }
-
-    p, li {
-      font-size: 1rem;
+    h1, h2, h3 {
+      color: #fff;
     }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
+    .section {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: auto;
     }
-
-    a:hover {
-      text-decoration: underline;
+    .badges img {
+      height: 36px;
+      margin: 5px;
     }
-
-    .toggle-theme {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      padding: 0.5rem 1rem;
-      background: var(--accent);
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 1rem;
-    }
-
-    .project-card {
-      background-color: var(--card-bg-light);
+    .projects .card {
+      background: #161b22;
+      border: 1px solid #30363d;
       border-radius: 8px;
       padding: 1rem;
+      margin: 1rem 0;
+      transition: transform 0.3s;
+    }
+    .projects .card:hover {
+      transform: scale(1.02);
+    }
+    details {
+      background-color: #0d1117;
+      border: 1px solid #444c56;
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
       margin-bottom: 1rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-      transition: background-color 0.3s;
     }
-
-    .dark-mode .project-card {
-      background-color: var(--card-bg-dark);
-    }
-
-    details summary {
-      cursor: pointer;
+    summary {
       font-weight: bold;
-      font-size: 1.1rem;
+      cursor: pointer;
     }
-
-    .stats img {
-      max-width: 100%;
-      display: block;
-      margin: 0 auto 1rem;
-    }
-
     form {
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
-      max-width: 500px;
-      margin: 0 auto;
+      gap: 1rem;
+      background: #161b22;
+      padding: 1rem;
+      border-radius: 6px;
+      border: 1px solid #30363d;
     }
-
     input, textarea {
-      padding: 0.75rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      width: 100%;
-    }
-
-    button[type="submit"] {
-      background-color: var(--accent);
-      color: white;
+      padding: 0.5rem;
       border: none;
-      padding: 0.75rem;
-      border-radius: 6px;
+      border-radius: 4px;
+    }
+    button {
+      padding: 0.5rem;
+      background: #2afadf;
+      border: none;
+      border-radius: 4px;
+      color: #000;
       font-weight: bold;
       cursor: pointer;
     }
-
-    button[type="submit"]:hover {
-      background-color: #2563eb;
-    }
-
     footer {
       text-align: center;
-      margin-top: 3rem;
-      padding: 1rem 0;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
+      margin: 2rem 0;
+      color: #586069;
     }
   </style>
 </head>
 <body>
-  <button class="toggle-theme" onclick="document.body.classList.toggle('dark-mode')">🌓 Toggle Theme</button>
 
-  <header>
-    <h1>PJ Piatt</h1>
-    <p><strong>IT Specialist | Cybersecurity Grad Student | Systems & Support Strategist</strong></p>
-    <p><a href="mailto:workwithpj@icloud.com">workwithpj@icloud.com</a> | <a href="https://www.linkedin.com/in/pj-piatt" target="_blank">LinkedIn</a> | <a href="https://github.com/pj-piatt/IT-portfolio/blob/main/PJ_Piatt_Resume.pdf" target="_blank">Resume (PDF)</a></p>
-  </header>
+<header>
+  <img src="favicon.ico" alt="PJ Piatt logo" />
+  <h1>PJ Piatt</h1>
+  <p>IT Specialist | Cybersecurity Grad Student | Systems & Support Strategist</p>
+</header>
 
-  <div class="container">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <details open>
-        <summary>🔐 PowerShell Audit Toolkit</summary>
-        <p>GUI-based auditing tool for Active Directory with group scan, password expiry automation, and CSV reporting.</p>
-        <a href="https://github.com/pj-piatt/powershell-audit-toolkit" target="_blank">View on GitHub</a>
-      </details>
-    </div>
-    <div class="project-card">
-      <details>
-        <summary>🌐 SharePoint Access Manager</summary>
-        <p>Manage and audit guest access securely in Microsoft 365 environments.</p>
-      </details>
-    </div>
-    <div class="project-card">
-      <details>
-        <summary>🛡 Intune Remediation Toolkit</summary>
-        <p>Remediation scripts and compliance reporting for endpoint management.</p>
-      </details>
-    </div>
+<section class="section" data-aos="fade-up">
+  <h2>About Me</h2>
+  <p>I’m an experienced IT professional with over a decade of success supporting users, improving security, and optimizing operations. I specialize in scalable help desk systems, IT automation, documentation, and secure SaaS environments.</p>
+</section>
 
-    <h2>GitHub Activity</h2>
-    <div class="stats">
-      <img src="https://github-readme-stats.vercel.app/api?username=pj-piatt&show_icons=true&theme=default" alt="PJ's GitHub Stats" />
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=pj-piatt&theme=default" alt="GitHub Streak" />
-    </div>
-
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/mnqedgzg" method="POST">
-      <input type="text" name="name" placeholder="Your name" required />
-      <input type="email" name="_replyto" placeholder="Your email" required />
-      <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+<section class="section" data-aos="fade-up">
+  <h2>🎓 Education & Certifications</h2>
+  <div class="badges">
+    <img src="https://img.shields.io/badge/UMGC-Cybersecurity-blueviolet" alt="UMGC"/>
+    <img src="https://img.shields.io/badge/UoP-IT%20%2F%20Data%20Science-orange" alt="UoP"/>
+    <img src="https://img.shields.io/badge/CompTIA-A+-red" alt="CompTIA A+"/>
+    <img src="https://img.shields.io/badge/ITIL-v4-brightgreen" alt="ITIL 4"/>
+    <img src="https://img.shields.io/badge/MS-IT%20Support-lightblue" alt="Microsoft IT Support"/>
+    <img src="https://img.shields.io/badge/Google-IT%20Support-yellowgreen" alt="Google IT Support"/>
   </div>
+</section>
 
-  <footer>
-    <p>&copy; 2025 PJ Piatt. All rights reserved.</p>
-  </footer>
+<section class="section projects" data-aos="fade-up">
+  <h2>🚀 Projects</h2>
 
-  <script>
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.body.classList.add('dark-mode');
-    }
-  </script>
+  <details>
+    <summary>🛡️ AD Audit Toolkit (PowerShell)</summary>
+    <div class="card">
+      <p>Custom-built GUI for auditing AD group membership and user permissions. Uses runspaces to prevent UI freezing, outputs CSV reports, and simplifies audit workflows for IT teams.</p>
+      <a href="https://github.com/pj-piatt/AuditToolkit" target="_blank">View on GitHub →</a>
+    </div>
+  </details>
+
+  <details>
+    <summary>🔐 Password Expiry Reminder Email Script</summary>
+    <div class="card">
+      <p>PowerShell script that emails users 7 days before their password expires, includes styling, helpful links, and tips. Improves password hygiene and reduces IT support tickets.</p>
+      <a href="https://github.com/pj-piatt/PasswordExpiryReminder" target="_blank">View on GitHub →</a>
+    </div>
+  </details>
+
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>📬 Contact Me</h2>
+  <form action="https://formspree.io/f/your-form-id" method="POST">
+    <input type="text" name="name" placeholder="Your name" required />
+    <input type="email" name="_replyto" placeholder="Your email" required />
+    <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>📊 GitHub Stats</h2>
+  <img src="https://github-readme-stats.vercel.app/api?username=pj-piatt&show_icons=true&theme=radical" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pj-piatt&layout=compact&theme=radical" alt="Top Languages" />
+</section>
+
+<footer>
+  &copy; 2025 PJ Piatt · Built with ❤️ using GitHub Pages
+</footer>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
