@@ -99,12 +99,57 @@
 <body>
 
 <header>
-  <img src="banner.jpg" alt="PJ Piatt Banner" style="width: 160px; border-radius: 12px;" />
+  <img src="banner.jpg" alt="PJ Piatt Banner" />
   <div class="intro">
     <h1>PJ Piatt</h1>
     <p>IT Specialist | Cybersecurity Grad Student | Systems & Support Strategist</p>
   </div>
 </header>
+
+<section class="section" data-aos="fade-up">
+  <h2>🚀 Featured Projects</h2>
+  <details>
+    <summary>🔍 Active Directory Audit Toolkit</summary>
+    <div class="card">
+      A PowerShell-based toolkit to audit AD group membership, permissions, and user details with a responsive GUI. Ideal for large enterprise file systems.
+      <br><a href="https://github.com/pj-piatt/AD-AuditToolkit" target="_blank">View Repository</a>
+    </div>
+  </details>
+  <details>
+    <summary>🔐 Password Expiry Notification Script</summary>
+    <div class="card">
+      Sends end-user emails when their passwords are set to expire. Includes a styled email template, inline instructions, and log reporting.
+      <br><a href="https://github.com/pj-piatt/PasswordExpiryReminder" target="_blank">View Repository</a>
+    </div>
+  </details>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>📜 Certifications & Education</h2>
+  <div class="badges">
+    <img src="https://img.shields.io/badge/CompTIA-A+-E81C4F?logo=CompTIA&logoColor=white" />
+    <img src="https://img.shields.io/badge/ITIL-v4-blue?logo=ITIL&logoColor=white" />
+    <img src="https://img.shields.io/badge/Microsoft-IT%20Support-blue?logo=microsoft&logoColor=white" />
+    <img src="https://img.shields.io/badge/Master's-Cybersecurity-orange" />
+    <img src="https://img.shields.io/badge/Master's-Data%20Science-yellow" />
+  </div>
+</section>
+
+<section class="section" data-aos="fade-up">
+  <h2>📬 Contact Me</h2>
+  <form action="https://formspree.io/f/xblyrwop" method="POST">
+    <input type="text" name="name" placeholder="Your name" required />
+    <input type="email" name="_replyto" placeholder="Your email" required />
+    <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+    <input type="hidden" name="_subject" value="New message from your portfolio site" />
+    <input type="hidden" name="_next" value="https://pj-piatt.github.io/thankyou.html" />
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 PJ Piatt. All rights reserved.
+</footer>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
