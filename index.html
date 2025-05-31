@@ -1,235 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="PJ Piatt | IT Specialist, Cybersecurity Student & AI Enthusiast" />
-  <title>PJ Piatt | IT Specialist</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PJ Piatt | Portfolio</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #1f2a3a;
+      background-color: #1e2a38;
       color: #f0f0f0;
-      line-height: 1.6;
     }
 
     header {
-      text-align: center;
-    }
-
-    .banner {
-      width: 100%;
-      height: auto;
+      background: url('banner.jpg') no-repeat center center/cover;
+      height: 250px;
     }
 
     h1 {
       text-align: center;
-      margin-top: 1rem;
-      font-size: 2.5rem;
-      color: #a8d0ff;
+      font-size: 2.8rem;
+      margin: 20px 0 10px;
     }
 
-    .rainbow-divider {
+    .divider {
+      width: 40%;
       height: 6px;
-      width: 60%;
-      margin: 1rem auto;
-      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-      border-radius: 3px;
+      margin: 0 auto 40px;
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+      border-radius: 10px;
     }
 
-    .section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
+    section {
+      padding: 40px 10%;
+      background-color: #263545;
+      margin: 20px auto;
+      border-radius: 8px;
     }
 
-    .section h2 {
+    section h2 {
       text-align: center;
-      color: #a8d0ff;
+      margin-bottom: 20px;
     }
 
-    .project-card {
-      background-color: #2b3a4d;
-      padding: 1rem;
-      border-radius: 8px;
-      margin: 1rem 0;
+    .about-content {
+      cursor: pointer;
+      padding: 10px;
+      background-color: #32455d;
+      border-radius: 6px;
     }
 
-    details {
-      background-color: #2b3a4d;
-      border-radius: 8px;
-      padding: 1rem;
+    .about-details {
+      display: none;
+      padding-top: 10px;
     }
 
-    .badge-row {
+    .grid-3 {
       display: flex;
-      flex-wrap: wrap;
+      gap: 20px;
       justify-content: space-between;
-      gap: 2rem;
-      margin-top: 1.5rem;
     }
 
-    .badge-section {
-      flex: 1 1 300px;
-      background-color: rgba(255, 255, 255, 0.03);
-      padding: 1rem;
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .blog-card {
+      background-color: #32455d;
+      padding: 15px;
       border-radius: 8px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .badge-section h3 {
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-      color: #a8d0ff;
-      font-size: 1.25rem;
+    .blog-card .date {
+      font-size: 0.85rem;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .pagination {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .project-dropdown {
+      background-color: #32455d;
+      padding: 10px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .tech-contact {
+      display: flex;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .contact-form, .badge-section {
+      flex: 1;
+      background-color: #32455d;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 4px;
     }
 
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 15px;
       font-size: 0.9rem;
-      background-color: #1a222f;
     }
 
-    .social-icons a {
-      margin: 0 0.5rem;
-      color: #a8d0ff;
-      font-size: 1.2rem;
+    a {
+      color: #66b2ff;
+      text-decoration: none;
     }
 
-    .blog-posts {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: space-between;
-    }
-
-    .blog-post {
-      flex: 1 1 calc(33.333% - 1rem);
-      background-color: #2b3a4d;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    input, textarea, button {
-      padding: 0.75rem;
-      border-radius: 4px;
-      border: none;
-      font-size: 1rem;
-    }
-
-    button {
-      background-color: #a8d0ff;
-      color: #1f2a3a;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #90bae1;
+    a:hover {
+      text-decoration: underline;
     }
   </style>
+  <script>
+    function toggleAbout() {
+      const details = document.getElementById('about-details');
+      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function switchPage(page) {
+      const posts = document.querySelectorAll('.blog-card');
+      posts.forEach((card, index) => {
+        card.style.display = (page === 1 && index < 3) || (page === 2 && index >= 3) ? 'block' : 'none';
+      });
+    }
+
+    window.onload = () => {
+      switchPage(1);
+    };
+  </script>
 </head>
-
 <body>
-  <header>
-    <img src="banner.jpg" alt="PJ Piatt banner" class="banner">
-    <h1>PJ Piatt</h1>
-    <div class="rainbow-divider"></div>
-  </header>
+  <header></header>
+  <h1>PJ Piatt</h1>
+  <div class="divider"></div>
 
-  <section class="section">
-    <details open>
-      <summary><h2>👋 About Me</h2></summary>
-      <p>
-        I'm PJ Piatt — a passionate IT Specialist, Cybersecurity graduate student, and AI enthusiast with over a decade of experience in technical support and enterprise IT environments. I blend hands-on problem solving with a love for process improvement, user education, and clean documentation.
-      </p>
-
-      <div class="badge-row">
-        <div class="badge-section">
-          <h3>🎓 Education</h3>
-          <ul>
-            <li>MS Cybersecurity Technology (in progress) — UMGC</li>
-            <li>MS Data Science — UMGC</li>
-            <li>BS Information Technology — University of Phoenix</li>
-            <li>AA Information Technology — University of Phoenix</li>
-          </ul>
-        </div>
-
-        <div class="badge-section">
-          <h3>📜 Certifications</h3>
-          <ul>
-            <li>Google IT Support Professional</li>
-            <li>Advanced Software Developer</li>
-            <li>Software Architecture</li>
-            <li>HIPAA for IT Professionals</li>
-          </ul>
-        </div>
+  <section>
+    <h2>👋 About Me</h2>
+    <div class="about-content" onclick="toggleAbout()">
+      Click to toggle details
+      <div id="about-details" class="about-details">
+        <p>I’m an experienced IT Support Specialist and Cybersecurity enthusiast. I hold a Master’s degree in Data Science and am currently completing my Master’s in Cybersecurity Technology. My experience spans help desk support, Microsoft 365, SharePoint, SSO/MFA implementation, and cloud security.</p>
+        <h3>🎓 Education</h3>
+        <ul>
+          <li>Master’s in Cybersecurity Technology – UMGC (In Progress)</li>
+          <li>Master’s in Data Science – Completed</li>
+          <li>Bachelor’s in IT – University of Phoenix</li>
+        </ul>
+        <h3>📜 Certifications</h3>
+        <ul>
+          <li>CompTIA A+</li>
+          <li>Google IT Support Professional Certificate</li>
+          <li>Microsoft IT Support Certificate</li>
+          <li>ITIL 4 Foundations</li>
+        </ul>
       </div>
-    </details>
+    </div>
   </section>
 
-  <section class="section">
+  <section>
     <h2>💼 Projects</h2>
-    <div class="project-card">
-      <details>
-        <summary>Custom PowerShell Audit Script</summary>
-        <p>Developed a responsive PowerShell GUI tool for Active Directory group and permission audits with export support.</p>
-      </details>
+    <div class="project-dropdown">
+      <strong>🧠 PowerShell Audit Toolkit</strong>
+      <p>GUI-based auditing tool for Active Directory with group scan, password-expiry automation, and CSV reporting.<br/>
+      <a href="#">View on GitHub</a></p>
     </div>
-    <div class="project-card">
-      <details>
-        <summary>IT Helpdesk Migration</summary>
-        <p>Migrated legacy helpdesk to Jira Service Management, implemented SSO, and trained all end users.</p>
-      </details>
+    <div class="project-dropdown">
+      <strong>🔐 SharePoint Access Manager</strong>
+      <p>Manage and audit guest access securely in Microsoft 365 environments.<br/>
+      <a href="#">View on GitHub</a></p>
+    </div>
+    <div class="project-dropdown">
+      <strong>🛠️ Intune Remediation Toolkit</strong>
+      <p>Remediation scripts and compliance reporting for endpoint management.<br/>
+      <a href="#">View on GitHub</a></p>
     </div>
   </section>
 
-  <section class="section">
+  <section>
     <h2>📝 Blog</h2>
-    <div class="blog-posts">
-      <div class="blog-post">
-        <h3>Quick Fix: Clearing Your Browser Cache</h3>
-        <p>Learn how to clear your cache to solve common website issues in under 30 seconds.</p>
-      </div>
-      <div class="blog-post">
-        <h3>Slow PC? Try These 3 Tips</h3>
-        <p>End-user friendly tips to boost PC performance using built-in Windows tools.</p>
-      </div>
-      <div class="blog-post">
-        <h3>🛡️ Create a Stronger Password Today</h3>
-        <p>Use passphrases, multi-word combos, and MFA to secure your logins easily.</p>
-      </div>
+    <div class="blog-grid">
+      <div class="blog-card"><h3>5 Quick Computer Tips for Beginners</h3><p class="date">Apr 24, 2024</p><p>Learn the easiest ways to solve everyday computer problems without needing IT support.</p></div>
+      <div class="blog-card"><h3>Stay Safe from Phishing Emails</h3><p class="date">Apr 24, 2024</p><p>Tips on spotting and avoiding phishing scams in your inbox.</p></div>
+      <div class="blog-card"><h3>How to Speed Up Your Computer</h3><p class="date">Apr 24, 2024</p><p>Simple steps to optimize your computer's performance.</p></div>
+      <div class="blog-card"><h3>Understanding MFA</h3><p class="date">Apr 25, 2024</p><p>Why Multi-Factor Authentication is critical for security today.</p></div>
+      <div class="blog-card"><h3>Intro to Microsoft Intune</h3><p class="date">Apr 25, 2024</p><p>Learn how Intune helps organizations manage endpoints and security policies.</p></div>
+      <div class="blog-card"><h3>What is Conditional Access?</h3><p class="date">Apr 25, 2024</p><p>A guide to Microsoft's Conditional Access policies and use cases.</p></div>
+    </div>
+    <div class="pagination">
+      <span style="cursor:pointer" onclick="switchPage(1)">&lt;</span> 
+      <span style="cursor:pointer" onclick="switchPage(1)">1</span> 
+      <span style="cursor:pointer" onclick="switchPage(2)">2</span> 
+      <span style="cursor:pointer" onclick="switchPage(2)">&gt;</span>
     </div>
   </section>
 
-  <section class="section">
-    <h2>📬 Contact Me</h2>
-    <form action="https://formspree.io/f/xblyrwop" method="POST">
-      <input type="text" name="name" placeholder="Your name" required />
-      <input type="email" name="_replyto" placeholder="Your email" required />
-      <textarea name="message" rows="5" placeholder="Your message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+  <section class="tech-contact">
+    <div class="badge-section">
+      <h2>🛠️ Tech Stack</h2>
+      <p>PowerShell, Intune, Azure AD, SharePoint, Microsoft 365, Proofpoint, GlobalProtect VPN</p>
+    </div>
+    <div class="contact-form">
+      <h2>📬 Contact Me</h2>
+      <form action="https://formspree.io/f/xblyrwop" method="POST">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="_replyto" placeholder="Your email" required />
+        <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
   </section>
 
   <footer>
-    <div class="social-icons">
-      <a href="mailto:pj@example.com" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/pj-piatt" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="resume.pdf" title="Download Resume" target="_blank"><i class="fas fa-file"></i></a>
-    </div>
-    <p>© 2025 PJ Piatt — Built with ❤️</p>
+    <p>© 2025 PJ Piatt. Made with ❤️</p>
   </footer>
 </body>
-
 </html>
