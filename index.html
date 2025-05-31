@@ -5,11 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PJ Piatt | Portfolio</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #1D2029;
+      background-color: #1e2a38;
       color: #f0f0f0;
     }
 
@@ -33,14 +34,9 @@
     }
 
     section {
-      padding: 40px 20px;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      background-color: #162739;
-      padding: 30px;
+      padding: 40px 10%;
+      background-color: #263545;
+      margin: 20px auto;
       border-radius: 8px;
     }
 
@@ -49,52 +45,38 @@
       margin-bottom: 20px;
     }
 
-    .about-header {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      justify-content: center;
-    }
-
-    .arrow {
-      margin-left: 10px;
-      color: #BF79CD;
-      font-size: 1.2rem;
-      transition: transform 0.3s ease;
-    }
-
-    .arrow.open {
-      transform: rotate(90deg);
+    .about-content {
+      padding: 10px;
+      background-color: #32455d;
+      border-radius: 6px;
     }
 
     .about-details {
       display: block;
-      margin-top: 20px;
+      padding-top: 10px;
     }
 
     .about-flex {
       display: flex;
+      justify-content: space-between;
       gap: 30px;
-      flex-wrap: wrap;
     }
 
     .about-flex ul {
       flex: 1;
-      padding: 0;
     }
 
     .project-dropdown {
+      background-color: #32455d;
+      padding: 10px;
+      border-radius: 6px;
+      margin-bottom: 10px;
       cursor: pointer;
-      margin-bottom: 20px;
     }
 
     .project-details {
       display: none;
       padding-top: 10px;
-    }
-
-    .project-dropdown strong {
-      color: #BF79CD;
     }
 
     .blog-grid {
@@ -104,9 +86,15 @@
     }
 
     .blog-card {
-      background-color: #162739;
+      background-color: #32455d;
       padding: 15px;
       border-radius: 8px;
+    }
+
+    .blog-card .date {
+      font-size: 0.85rem;
+      color: #ccc;
+      margin-bottom: 10px;
     }
 
     .pagination {
@@ -114,133 +102,57 @@
       margin-top: 20px;
     }
 
+    .tech-contact-container h2 {
+      text-align: center;
+      margin-bottom: 0;
+    }
+
     .tech-contact {
       display: flex;
       flex-wrap: wrap;
+      gap: 20px;
       justify-content: space-between;
-      gap: 40px;
     }
 
-    .tech-contact h3 {
-      margin-top: 0;
-    }
-
-    .badge-wrapper,
-    .contact-wrapper {
+    .contact-form, .badge-section {
       flex: 1 1 48%;
-    }
-
-    .badge-section,
-    .contact-form {
-      background-color: #162739;
-      padding: 30px;
+      background-color: #32455d;
+      padding: 20px;
       border-radius: 8px;
     }
 
-    .contact-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-      display: flex;
-      flex-direction: column;
-    }
-
     .contact-form input,
-.contact-form textarea {
-  padding: 14px;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: none;
-  background-color: #1D2029;
-  color: #f0f0f0;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #aaa;
-}
-    .contact-form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 15px;
-      border: none;
-      border-radius: 4px;
-      font-size: 1rem;
-    }
-
+    .contact-form textarea,
     .contact-form button {
-  align-self: flex-start;
-  padding: 12px 24px;
-  font-size: 1rem;
-  background-color: #4999ED;
-  border: none;
-  border-radius: 6px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-      margin-top: 20px;
-      padding: 12px;
-      background-color: #4999ED;
-      color: white;
-      font-weight: bold;
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
       border: none;
       border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background 0.3s ease;
     }
 
-    .contact-form button:hover {
-      background-color: #3a85d6;
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
     }
 
     a {
-      color: #4999ED;
+      color: #66b2ff;
       text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
     }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 900px) {
-      .tech-contact {
-        flex-direction: column;
-      }
-
-      .badge-wrapper,
-      .contact-wrapper {
-        flex: 1 1 100%;
-      }
-    }
   </style>
   <script>
-    function toggleAbout() {
-      const details = document.getElementById("about-details");
-      const arrow = document.getElementById("about-arrow");
-      const isOpen = details.style.display === "block";
-      details.style.display = isOpen ? "none" : "block";
-      arrow.classList.toggle("open", !isOpen);
-    }
-
     function toggleProject(element) {
-      const detail = element.querySelector(".project-details");
+      const detail = element.querySelector('.project-details');
       if (detail) {
-        detail.style.display = detail.style.display === "block" ? "none" : "block";
+        detail.style.display = detail.style.display === 'block' ? 'none' : 'block';
       }
     }
-
-    window.onload = () => {
-      document.getElementById("about-details").style.display = "block";
-      document.getElementById("about-arrow").classList.add("open");
-    };
   </script>
 </head>
 <body>
@@ -248,13 +160,9 @@
   <h1>PJ Piatt</h1>
   <div class="divider"></div>
 
-  <!-- About Me -->
   <section>
-    <div class="container">
-      <div class="about-header" onclick="toggleAbout()">
-        <h2>👋 About Me</h2>
-        <span id="about-arrow" class="arrow">▶</span>
-      </div>
+    <h2>👋 About Me</h2>
+    <div class="about-content">
       <div id="about-details" class="about-details">
         <p>I’m an experienced IT Support Specialist and Cybersecurity enthusiast. I hold a Master’s degree in Data Science and am currently completing my Master’s in Cybersecurity Technology. My experience spans help desk support, Microsoft 365, SharePoint, SSO/MFA implementation, and cloud security.</p>
         <div class="about-flex">
@@ -276,65 +184,53 @@
     </div>
   </section>
 
-  <!-- Projects -->
   <section>
-    <div class="container">
-      <h2>💼 Projects</h2>
-      <div class="project-dropdown" onclick="toggleProject(this)">
-        <strong>🧠 PowerShell Audit Toolkit</strong>
-        <div class="project-details">
-          <p>GUI-based auditing tool for Active Directory with group scan, password-expiry automation, and CSV reporting.</p>
-          <a href="#">View on GitHub</a>
-        </div>
+    <h2>💼 Projects</h2>
+    <div class="project-dropdown" onclick="toggleProject(this)">
+      <strong>🧠 PowerShell Audit Toolkit</strong>
+      <div class="project-details">
+        <p>GUI-based auditing tool for Active Directory with group scan, password-expiry automation, and CSV reporting.</p>
+        <a href="#">View on GitHub</a>
       </div>
-      <div class="project-dropdown" onclick="toggleProject(this)">
-        <strong>🔐 SharePoint Access Manager</strong>
-        <div class="project-details">
-          <p>Manage and audit guest access securely in Microsoft 365 environments.</p>
-          <a href="#">View on GitHub</a>
-        </div>
+    </div>
+    <div class="project-dropdown" onclick="toggleProject(this)">
+      <strong>🔐 SharePoint Access Manager</strong>
+      <div class="project-details">
+        <p>Manage and audit guest access securely in Microsoft 365 environments.</p>
+        <a href="#">View on GitHub</a>
       </div>
     </div>
   </section>
 
-  <!-- Blog -->
   <section>
-    <div class="container">
-      <h2>📝 Blog</h2>
-      <div class="blog-grid">
-        <div class="blog-card"><h3>5 Quick Computer Tips</h3><p class="date">Apr 24, 2024</p><p>Simple PC fixes for common user issues.</p></div>
-        <div class="blog-card"><h3>Secure Your Inbox</h3><p class="date">Apr 25, 2024</p><p>How to avoid phishing scams.</p></div>
-        <div class="blog-card"><h3>Intro to MFA</h3><p class="date">Apr 26, 2024</p><p>What is MFA and why it matters.</p></div>
-      </div>
-      <div class="pagination"><span>&lt;</span> <span>1</span> <span>2</span> <span>&gt;</span></div>
+    <h2>📝 Blog</h2>
+    <div class="blog-grid">
+      <div class="blog-card"><h3>5 Quick Computer Tips</h3><p class="date">Apr 24, 2024</p><p>Simple PC fixes for common user issues.</p></div>
+      <div class="blog-card"><h3>Secure Your Inbox</h3><p class="date">Apr 25, 2024</p><p>How to avoid phishing scams.</p></div>
+      <div class="blog-card"><h3>Intro to MFA</h3><p class="date">Apr 26, 2024</p><p>What is MFA and why it matters.</p></div>
     </div>
+    <div class="pagination"><span>&lt;</span> <span>1</span> <span>2</span> <span>&gt;</span></div>
   </section>
 
-  <!-- Tech Stack + Contact Me -->
-  <section>
-    <div class="container tech-contact">
-      <div class="badge-wrapper">
-        <h3>🛠️ Tech Stack</h3>
-        <div class="badge-section">
-          <p><span>💻</span> PowerShell, Intune, Azure AD, SharePoint, Microsoft 365</p>
-          <p><span>🛡️</span> Proofpoint, GlobalProtect VPN, MFA/SSO</p>
-        </div>
+  <section class="tech-contact-container">
+    <h2>🛠️ Tech Stack</h2>
+    <div class="tech-contact">
+      <div class="badge-section">
+        <p><span>💻</span> PowerShell, Intune, Azure AD, SharePoint, Microsoft 365</p>
+        <p><span>🛡️</span> Proofpoint, GlobalProtect VPN, MFA/SSO</p>
       </div>
-      <div class="contact-wrapper">
-        <h3>📬 Contact Me</h3>
-        <div class="contact-form">
-          <form action="https://formspree.io/f/xblyrwop" method="POST">
-            <input type="text" name="name" placeholder="Your name" required />
-            <input type="email" name="_replyto" placeholder="Your email" required />
-            <textarea name="message" rows="6" placeholder="Your message" required></textarea>
-            <button type="submit">Send</button>
-          </form>
-        </div>
+      <div class="contact-form">
+        <h2>📬 Contact Me</h2>
+        <form action="https://formspree.io/f/xblyrwop" method="POST">
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="_replyto" placeholder="Your email" required />
+          <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>© 2025 PJ Piatt. Made with ❤️</p>
   </footer>
