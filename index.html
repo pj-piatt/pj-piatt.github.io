@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,21 +17,31 @@
     }
     header {
       background: linear-gradient(to right, #ff0080, #7928ca, #2afadf);
-      padding: 2rem 1rem;
-      text-align: center;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
     }
     header img {
-      width: 120px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
+      width: 160px;
+      border-radius: 12px;
     }
-    h1, h2, h3 {
-      color: #fff;
+    .intro {
+      text-align: left;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    p {
+      margin: 0.5rem 0 0;
+      font-size: 1.1rem;
     }
     .section {
-      padding: 2rem 1rem;
+      padding: 2rem;
       max-width: 900px;
       margin: auto;
+      text-align: left;
     }
     .badges img {
       height: 36px;
@@ -42,10 +53,6 @@
       border-radius: 8px;
       padding: 1rem;
       margin: 1rem 0;
-      transition: transform 0.3s;
-    }
-    .projects .card:hover {
-      transform: scale(1.02);
     }
     details {
       background-color: #0d1117;
@@ -92,75 +99,17 @@
 <body>
 
 <header>
- 
-  <h1>PJ Piatt</h1>
-  <p>IT Specialist | Cybersecurity Grad Student | Systems & Support Strategist</p>
-</header>
-
-<section class="section" data-aos="fade-up">
-  <h2>About Me</h2>
-  <p>I’m an experienced IT professional with over a decade of success supporting users, improving security, and optimizing operations. I specialize in scalable help desk systems, IT automation, documentation, and secure SaaS environments.</p>
-</section>
-
-<section class="section" data-aos="fade-up">
-  <h2>🎓 Education & Certifications</h2>
-  <div class="badges">
-    <img src="https://img.shields.io/badge/UMGC-Cybersecurity-blueviolet" alt="UMGC"/>
-    <img src="https://img.shields.io/badge/UoP-IT%20%2F%20Data%20Science-orange" alt="UoP"/>
-    <img src="https://img.shields.io/badge/CompTIA-A+-red" alt="CompTIA A+"/>
-    <img src="https://img.shields.io/badge/ITIL-v4-brightgreen" alt="ITIL 4"/>
-    <img src="https://img.shields.io/badge/MS-IT%20Support-lightblue" alt="Microsoft IT Support"/>
-    <img src="https://img.shields.io/badge/Google-IT%20Support-yellowgreen" alt="Google IT Support"/>
+  <img src="banner.jpg" alt="PJ Piatt Banner" style="width: 160px; border-radius: 12px;" />
+  <div class="intro">
+    <h1>PJ Piatt</h1>
+    <p>IT Specialist | Cybersecurity Grad Student | Systems & Support Strategist</p>
   </div>
-</section>
-
-<section class="section projects" data-aos="fade-up">
-  <h2>🚀 Projects</h2>
-
-  <details>
-    <summary>🛡️ AD Audit Toolkit (PowerShell)</summary>
-    <div class="card">
-      <p>Custom-built GUI for auditing AD group membership and user permissions. Uses runspaces to prevent UI freezing, outputs CSV reports, and simplifies audit workflows for IT teams.</p>
-      <a href="https://github.com/pj-piatt/AuditToolkit" target="_blank">View on GitHub →</a>
-    </div>
-  </details>
-
-  <details>
-    <summary>🔐 Password Expiry Reminder Email Script</summary>
-    <div class="card">
-      <p>PowerShell script that emails users 7 days before their password expires, includes styling, helpful links, and tips. Improves password hygiene and reduces IT support tickets.</p>
-      <a href="https://github.com/pj-piatt/PasswordExpiryReminder" target="_blank">View on GitHub →</a>
-    </div>
-  </details>
-
-</section>
-
-<section class="section" data-aos="fade-up">
-  <h2>📬 Contact Me</h2>
-  <form action="https://formspree.io/f/xblyrwop" method="POST">
-    <!-- Redirect to thank-you.html after submission -->
-    <input type="hidden" name="_next" value="https://pj-piatt.github.io/thank-you.html">
-
-    <input type="text" name="name" placeholder="Your name" required />
-    <input type="email" name="_replyto" placeholder="Your email" required />
-    <textarea name="message" rows="5" placeholder="Your message" required></textarea>
-    <button type="submit">Send</button>
-  </form>
-</section>
-
-<section class="section" data-aos="fade-up">
-  <h2>📊 GitHub Stats</h2>
-  <img src="https://github-readme-stats.vercel.app/api?username=pj-piatt&show_icons=true&theme=radical" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pj-piatt&layout=compact&theme=radical" alt="Top Languages" />
-</section>
-
-<footer>
-  &copy; 2025 PJ Piatt · Built with ❤️ using GitHub Pages
-</footer>
+</header>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init();
 </script>
+
 </body>
 </html>
