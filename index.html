@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PJ Piatt | IT Portfolio</title>
   <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #0d1117;
+      background-color: #101623;
       color: #c9d1d9;
+      scroll-behavior: smooth;
     }
     header img {
       width: 100%;
@@ -20,68 +21,75 @@
       margin: auto;
     }
     h1 {
-      text-align: center;
-      margin-top: 0.5rem;
+      text-align: left;
+      margin: 1rem auto 0.25rem;
       font-size: 2.5rem;
+      max-width: 960px;
+      padding-left: 1rem;
     }
-    .rainbow-bar {
-      width: 200px;
-      height: 4px;
-      margin: 0.5rem auto;
-      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-      border-radius: 2px;
-    }
-    .subtitle {
+    .subtitle, .contact {
       text-align: center;
       font-weight: 600;
       margin-bottom: 0.5rem;
     }
-    .contact {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
     .contact a {
       color: #58a6ff;
-      text-decoration: none;
       margin: 0 8px;
+      text-decoration: none;
+    }
+    .rainbow-divider {
+      width: 100%;
+      height: 10px;
+      margin: 2rem 0;
+      background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+      background-size: 300% 100%;
+      animation: shimmer 3s linear infinite;
+    }
+    @keyframes shimmer {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
     }
     section {
       max-width: 960px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    .project {
-      background: #161b22;
-      border-radius: 8px;
+      margin: auto;
       padding: 1rem;
+    }
+    h2 {
+      text-align: center;
+      font-size: 1.75rem;
       margin-bottom: 1rem;
     }
-    .project h3 {
-      margin: 0;
+    .project, .card, form {
+      background: #161b22;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    details summary {
+      cursor: pointer;
+      font-size: 1.2rem;
+      font-weight: bold;
     }
     .blog-posts {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      gap: 1rem;
     }
     .card {
-      background: #1c2128;
-      border-radius: 8px;
-      padding: 1rem;
-      margin: 0.5rem 0;
       width: 30%;
       text-align: left;
     }
     .pagination {
       text-align: center;
-      margin-top: 0.5rem;
+      margin-top: 1rem;
     }
     .tech-contact-wrapper {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
     }
-    .tech-stack, form {
+    .tech-stack, .education, form {
       width: 48%;
     }
     .badge {
@@ -101,8 +109,8 @@
       border-radius: 5px;
     }
     form button {
-      background: #238636;
-      color: #fff;
+      background: #2f81f7;
+      color: white;
       padding: 0.6rem 1.5rem;
       border: none;
       border-radius: 5px;
@@ -112,8 +120,13 @@
     footer {
       text-align: center;
       padding: 2rem 1rem;
+      background-color: #1b1f27;
       font-size: 0.9rem;
       color: #8b949e;
+    }
+    .github-stats img {
+      max-width: 300px;
+      margin: 0.5rem;
     }
   </style>
 </head>
@@ -122,33 +135,36 @@
 <header>
   <img src="banner.jpg" alt="PJ Banner" />
   <h1>PJ Piatt</h1>
-  <div class="rainbow-bar"></div>
   <div class="subtitle">IT Specialist | Cybersecurity Grad Student | Systems & Support Strategist</div>
   <div class="contact">
-    <a href="mailto:workwithpj@icloud.com">📧 Email</a> |
-    <a href="https://www.linkedin.com/in/pj-piatt">LinkedIn</a> |
-    <a href="https://github.com/pj-piatt/IT-portfolio/blob/main/PJ_Piatt_Resume.pdf">Resume (PDF)</a>
+    <a href="mailto:workwithpj@icloud.com"><i class="fas fa-envelope"></i> Email</a> |
+    <a href="https://www.linkedin.com/in/pj-piatt"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+    <a href="https://github.com/pj-piatt/IT-portfolio/blob/main/PJ_Piatt_Resume.pdf"><i class="fas fa-file-pdf"></i> Resume (PDF)</a>
   </div>
 </header>
 
+<div class="rainbow-divider"></div>
+
 <section>
   <h2>Projects</h2>
-  <div class="project">
-    <h3>🧠 PowerShell Audit Toolkit</h3>
-    <p>GUI: based auditing tool for Active Directory with group scan, password-expiry automation, and CSV reporting.</p>
-    <a href="#">View on GitHub</a>
-  </div>
-  <div class="project">
-    <h3>🌐 SharePoint Access Manager</h3>
+  <details class="project" open>
+    <summary>🧠 PowerShell Audit Toolkit</summary>
+    <p>GUI-based auditing tool for Active Directory with group scan, password-expiry automation, and CSV reporting.</p>
+    <a href="https://github.com/pj-piatt/powershell-audit-toolkit">View on GitHub</a>
+  </details>
+  <details class="project">
+    <summary>🌐 SharePoint Access Manager</summary>
     <p>Manage and audit guest access securely in Microsoft 365 environments.</p>
-    <a href="#">View on GitHub</a>
-  </div>
-  <div class="project">
-    <h3>🛠️ Intune Remediation Toolkit</h3>
+    <a href="https://github.com/pj-piatt/sharepoint-access-manager">View on GitHub</a>
+  </details>
+  <details class="project">
+    <summary>🛠️ Intune Remediation Toolkit</summary>
     <p>Remediation scripts and compliance reporting for endpoint management.</p>
-    <a href="#">View on GitHub</a>
-  </div>
+    <a href="https://github.com/pj-piatt/intune-remediation-toolkit">View on GitHub</a>
+  </details>
 </section>
+
+<div class="rainbow-divider"></div>
 
 <section>
   <h2>Blog Posts</h2>
@@ -160,15 +176,17 @@
   <div class="pagination"><span>1</span> <span>2</span></div>
 </section>
 
+<div class="rainbow-divider"></div>
+
 <section class="tech-contact-wrapper">
   <div class="tech-stack">
     <h2>💻 Tech Stack</h2>
-    <span class="badge">B.S. Information Technology</span>
-    <span class="badge">M.S. Data Science</span>
-    <span class="badge">M.S. Cybersecurity</span>
-    <span class="badge">ITIL Certified</span>
     <span class="badge">PowerShell</span>
     <span class="badge">Microsoft 365</span>
+    <span class="badge">Google Workspace</span>
+    <span class="badge">SharePoint</span>
+    <span class="badge">Jira</span>
+    <span class="badge">Confluence</span>
   </div>
   <form action="https://formspree.io/f/xblyrwop" method="POST">
     <h2>📬 Contact Me</h2>
@@ -179,8 +197,32 @@
   </form>
 </section>
 
+<div class="rainbow-divider"></div>
+
+<section>
+  <h2>🎓 Education & Certifications</h2>
+  <div class="education">
+    <span class="badge">B.S. Information Technology</span>
+    <span class="badge">M.S. Data Science</span>
+    <span class="badge">M.S. Cybersecurity</span>
+    <span class="badge">CompTIA A+</span>
+    <span class="badge">ITIL Certified</span>
+    <span class="badge">Microsoft IT Support</span>
+    <span class="badge">Google IT Support</span>
+    <span class="badge">Healthcare IT Support</span>
+  </div>
+</section>
+
+<div class="rainbow-divider"></div>
+
+<section class="github-stats">
+  <h2>📊 GitHub Activity</h2>
+  <img src="https://github-readme-stats.vercel.app/api?username=pj-piatt&show_icons=true&theme=radical" alt="GitHub Stats" />
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=pj-piatt.github.io" alt="Visitor Count" />
+</section>
+
 <footer>
-  &copy; 2025 PJ Piatt • Built with 💻 GitHub Pages
+  &copy; 2025 PJ Piatt • Built with ❤️ using GitHub Pages
 </footer>
 
 </body>
