@@ -101,17 +101,48 @@
       margin-top: 20px;
     }
 
-    .tech-contact-container h2 {
-      text-align: center;
-      margin-bottom: 0;
-    }
+    .tech-contact-container {
+  padding: 40px 10%;
+  background-color: #151E28;
+}
 
-    .tech-contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: space-between;
-    }
+.tech-contact-wrapper {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.badge-section,
+.contact-section {
+  flex: 1 1 45%;
+  background-color: #222C39;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.contact-section input,
+.contact-section textarea,
+.contact-section button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .tech-contact-wrapper {
+    flex-direction: column;
+  }
+
+  .badge-section,
+  .contact-section {
+    flex: 1 1 100%;
+  }
+}
+
 
     .contact-form, .badge-section {
       flex: 1 1 48%;
